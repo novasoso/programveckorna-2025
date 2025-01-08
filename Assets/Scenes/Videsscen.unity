@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 1253630667}
   m_Layer: 0
   m_Name: NPC2
-  m_TagString: Interact-eable
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 1626678632}
   m_Layer: 0
   m_Name: NPC1
-  m_TagString: Interact-eable
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
