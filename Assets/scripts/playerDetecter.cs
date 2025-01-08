@@ -16,7 +16,7 @@ public class playerDetecter : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (CollisionIsPlayer(collision) == true)
+        if (CollisionIsPlayer(collision))
         {
             print("player is within trigger of an npc");
             PlayerDetected = true;
@@ -24,7 +24,7 @@ public class playerDetecter : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (CollisionIsPlayer(collision) == true)
+        if (CollisionIsPlayer(collision))
         {
             print("player is no longer within trigger on an npc");
             PlayerDetected = false;
@@ -33,7 +33,7 @@ public class playerDetecter : MonoBehaviour
 
     public bool CollisionIsPlayer(Collider2D collision)
     {
-        if (collision.CompareTag("Player") == true)
+        if (collision.CompareTag("Player"))
         {
             return true;
         }

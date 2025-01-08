@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 384055198}
   - component: {fileID: 384055197}
   - component: {fileID: 384055196}
+  - component: {fileID: 384055201}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -294,6 +295,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384055201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384055195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da26dadc128379d43a4bad6058b6b877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &864543249
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +678,7 @@ GameObject:
   - component: {fileID: 1253630667}
   m_Layer: 0
   m_Name: NPC2
-  m_TagString: Untagged
+  m_TagString: Interact-eable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -850,7 +863,7 @@ GameObject:
   - component: {fileID: 1626678632}
   m_Layer: 0
   m_Name: NPC1
-  m_TagString: Untagged
+  m_TagString: Interact-eable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
