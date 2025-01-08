@@ -13,11 +13,16 @@ public class checkInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nearbyInteractable != null && nearbyInteractable.CompareTag("Interactable") && detecter.PlayerDetected == true)
+        if (nearbyInteractable != null && detecter.PlayerDetected == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (nearbyInteractable.CompareTag("Interactable") && Input.GetKeyDown(KeyCode.E))
             {
-                print("begin interact event sequence");
+                print("begin interact with item/pick up sequence");
+            }
+            else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E))
+            {
+                print("begin interact with NPC/Dialogue sequence");
+
             }
         }
 
@@ -38,7 +43,7 @@ public class checkInteraction : MonoBehaviour
     }
     private bool ObjectDetectedisInteractable(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Interactable"))
+        if (collision.gameObject.CompareTag("Interactable") || collision.gameObject.CompareTag("NPC"))
         {
             return true;
         }
