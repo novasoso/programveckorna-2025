@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class skib : MonoBehaviour
+public class interactionPromptController : MonoBehaviour
 {
+    public TextMeshProUGUI tmpugui;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
