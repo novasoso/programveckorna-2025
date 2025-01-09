@@ -7,6 +7,7 @@ TagManager:
   - interactPrompt
   - Interactable
   - NPC
+  - enemy
   layers:
   - Default
   - TransparentFX
