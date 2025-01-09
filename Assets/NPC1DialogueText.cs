@@ -21,29 +21,29 @@ public class NPC1DialogueText : MonoBehaviour
 
     public void Dialogue()
     {
-        interactScript.timesInteracted++; //increase times the npc has been interacted with
         while (detector.PlayerDetected == true && interactScript.interacting == true)
         {
-            if (dialogueTrack == interactScript.timesInteracted)
+            if (dialogueTrack == 0)
+            {
+                print("gcvgjcjc");
+            }
+            else if (dialogueTrack == 1)
+            {
+                print("gcvgjbubcjc");
+            }
+            else if (dialogueTrack == 2)
+            {
+                print("gcvgjcjvhkjacghkujkygtfdrhjkjc");
+            }
+            else if (dialogueTrack == 3)
+            {
+                print("gcvgjcjc");
+            }
+            else if (dialogueTrack >= 4)
             {
 
             }
-            else if (dialogueTrack == interactScript.timesInteracted)
-            {
-
-            }
-            else if (dialogueTrack == interactScript.timesInteracted)
-            {
-
-            }
-            else if (dialogueTrack == interactScript.timesInteracted)
-            {
-
-            }
-            else if (dialogueTrack >= interactScript.timesInteracted)
-            {
-
-            }
+            dialogueTrack++;
             interactScript.interacting = false;
         }
     }

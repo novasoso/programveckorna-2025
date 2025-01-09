@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,7 +9,6 @@ public class checkInteraction : MonoBehaviour
     playerDetecter detecter;
     GameObject nearbyInteractable;
     public bool interacting = false;
-    public int timesInteracted = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,26 +22,20 @@ public class checkInteraction : MonoBehaviour
         {
             if (nearbyInteractable.CompareTag("Interactable") && Input.GetKeyDown(KeyCode.E)) // if the nearby interactable is item and E is pressed
             {
+                print("item get");
                 interacting = true; //player has interacted
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E)) // else, if the nearby interactable is NPC and E is pressed
             {
                 interacting = true; //player has interacted
                 string getDialogue = nearbyInteractable.name + "DialogueText"; //save the npc's name +"DialogueText" as a string, which is the script containing the given npcs dialogue
-                if (nearbyInteractable.GetComponent(getDialogue.GetType()) != null) //if the nearby npc's dialogue script is not null, then -
+                if (nearbyInteractable.GetComponent(getDialogue)) //returns true if nearby npc has dialogue component that matches string getDialogue
                 {
-                    print("works kinda");
-                    getDialogue.GetType DialogueToAccess = nearbyInteractable.GetComponent(getDialogue.GetType()); // access and assign the npc's dialogue script as getDialogues class
-                    DialogueToAccess.Dialogue(); //call upon the npc's dialogue Method.
-                    timesInteracted++;
+                    var DialogueToAccess = nearbyInteractable.GetComponent(getDialogue); // access and assign the npc's dialogue script as getDialogues class
+                    DialogueToAccess.gameObject.SendMessage("Dialogue"); //call upon the npc's dialogue Method.
                 }
             }
         }
-        else
-        {
-            timesInteracted = 0;
-        }
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
