@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyCombatStart : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject enemyType;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class EnemyCombatStart : MonoBehaviour
        
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
             print("Enemy collides with player");
         }
     }
