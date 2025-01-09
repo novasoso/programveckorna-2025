@@ -20,10 +20,11 @@ public class EnemyCombatStart : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Enemy collides with player");
+       
         if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(2);
+            print("Enemy collides with player");
         }
     }
 }
