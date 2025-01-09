@@ -9,7 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-<<<<<<< Updated upstream
     path: Assets/Scenes/leon scen sigma.unity
     guid: b897bcd35d2db0c4f92dc0201c73f7bb
   - enabled: 1
@@ -18,11 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/room1.unity
     guid: 56bc11e7884239940ad86293724afbb3
-=======
     path: Assets/Scenes/ElonsRoligaScen.unity
     guid: 7559718aae4f35b4fa4cdf288ad083f6
   - enabled: 1
     path: Assets/Scenes/ElonsRoligaCombatTestingGround.unity
     guid: 995d78d7a565f0446983b790b2505ba4
->>>>>>> Stashed changes
   m_configObjects: {}

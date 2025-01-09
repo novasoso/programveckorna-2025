@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class checkInteraction : MonoBehaviour
@@ -21,10 +22,16 @@ public class checkInteraction : MonoBehaviour
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E))
             {
-                print("sigmaboy");
+                print("begin dialogue");
+                string getDialogue = nearbyInteractable.name + "DialogueText";
+                if (nearbyInteractable.GetComponent(getDialogue.GetType()) != null)
+                {
+                    Type skibidi.GetType = nearbyInteractable.GetComponent(getDialogue.GetType());
+                    nearbyInteractable.Dialogue();
+                }
             }
-        }
 
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
