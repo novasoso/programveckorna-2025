@@ -21,8 +21,7 @@ public class checkInteraction : MonoBehaviour
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E))
             {
-                print("begin interact with NPC/Dialogue sequence");
-
+                print("sigmaboy");
             }
         }
 
