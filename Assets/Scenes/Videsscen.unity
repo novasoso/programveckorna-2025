@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 1253630666}
   - component: {fileID: 1253630667}
   m_Layer: 0
-  m_Name: NPC2
+  m_Name: Zhonyas
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1184,6 +1184,7 @@ GameObject:
   - component: {fileID: 1626678627}
   - component: {fileID: 1626678631}
   - component: {fileID: 1626678632}
+  - component: {fileID: 1626678633}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -1353,6 +1354,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04f6c990aa2057f4cac5042f6b67a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1626678633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626678626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369586b0dbc70684e88288d185111ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2060270175
