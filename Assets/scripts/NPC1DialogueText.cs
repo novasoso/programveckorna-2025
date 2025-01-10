@@ -21,23 +21,23 @@ public class NPC1DialogueText : MonoBehaviour
         {
             if (dialogueTrack == 0)
             {
-                StartCoroutine(tmp.RevealText("insert dialogue track1", revealTime)); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
+                tmp.StartRevealText("insert dialogue track1", revealTime); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
             else if (dialogueTrack == 1)
             {
-                StartCoroutine(tmp.RevealText("insert dialogue track2", revealTime));
+                tmp.StartRevealText("insert dialogue track2", revealTime);
             }
             else if (dialogueTrack == 2)
             {
-                StartCoroutine(tmp.RevealText("insert dialogue track3", revealTime));
+                tmp.StartRevealText("insert dialogue track3", revealTime);
             }
             else if (dialogueTrack == 3)
             {
-                StartCoroutine(tmp.RevealText("insert dialogue track4", revealTime));
+                tmp.StartRevealText("insert dialogue track4", revealTime);
             }
             else if (dialogueTrack >= 4)
             {
-                StartCoroutine(tmp.RevealText("insert dialogue track5", revealTime));
+                tmp.StartRevealText("insert dialogue track5", revealTime);
             }
             dialogueTrack++;
             interactScript.interacting = false;
