@@ -40,7 +40,7 @@ public class DialogBoxController : MonoBehaviour
     {
         print("playered triggered npc");
         isInside = true;
-        while (boxIsInView == false || isInside == true)
+        while (boxIsInView == false && isInside == true)
         {
             print("in while loop");
             if (check.interacting == true && boxIsInView == false)
