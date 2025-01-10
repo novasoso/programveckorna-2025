@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - enemy
   - door
+  - dialogue
   layers:
   - Default
   - TransparentFX
