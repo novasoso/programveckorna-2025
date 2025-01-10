@@ -15,6 +15,7 @@ public class AttackEnemy : MonoBehaviour
     public void attackEnemy()
     {
         foundEnemyHealth.EnemyHealth -= playerDamage.playerDamage;
+        print("Player dealt " + playerDamage.playerDamage + " and the enemy now has " + foundEnemyHealth.EnemyHealth);
     }
 
 }
