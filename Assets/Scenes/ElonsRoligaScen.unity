@@ -1342,6 +1342,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 19775090}
     - target: {fileID: 3003350879906811623, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 7242045642488277897}
+    - target: {fileID: 3003350879906811623, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1398,6 +1402,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+--- !u!1 &7242045642488277897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6420573336066827175, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+  m_PrefabInstance: {fileID: 7242045642488277896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
