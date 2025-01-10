@@ -9,13 +9,11 @@ public class NightMode : MonoBehaviour
     public Color changeInteractableHue;
     public Color dayHue;
     public bool isNight = false;
-
     public List<GameObject> gameObjects;
     // Start is called before the first frame update
     void Start()
     {
-        nightmode();
-        Invoke("dayMode", 5f);
+        
     }
 
     private void nightmode()
