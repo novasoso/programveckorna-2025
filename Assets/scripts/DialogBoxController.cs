@@ -6,13 +6,12 @@ using UnityEngine;
 public class DialogBoxController : MonoBehaviour
 {
     checkInteraction check;
-    List<GameObject> potentialBoxList;
-    private bool boxIsInView = false;
+    public GameObject box;
+    private bool boxIsInView = true;
     // Start is called before the first frame update
     void Start()
     {
         check = GameObject.FindGameObjectWithTag("Player").GetComponent<checkInteraction>();
-        potentialBoxList = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
     }
 
     // Update is called once per frame
@@ -20,48 +19,23 @@ public class DialogBoxController : MonoBehaviour
     {
 
     }
-    private GameObject findBox()
-    {
-        print(potentialBoxList);
-        foreach(GameObject obj in potentialBoxList)
-        {
-            print(obj);
-            if (obj.name == "Dialoguebox")
-            {
-                print("found box! returning " + obj + "...");
-                return obj;
-            }
-        }
-        print("found nothing :(, returning null...");
-        return null;
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("playered triggered npc");
-        if (boxIsInView == false)
+        print("playered triggered npc & boxisinview is "+boxIsInView);
+        while (boxIsInView == false && Input.GetKeyDown(KeyCode.E)==false)
         {
-            print("in while loop");
-            if (check.interacting == true && boxIsInView == false)
-            {
-                findBox().transform.position = new(0, 160, 0);
-                boxIsInView = true;
-                print("Box moved to 160!");
-            }
-            else 
-            {
-                return;
-            }
-        }
-        else
-        {
-            print("did not enter while loop because box InView is " + boxIsInView + " and check.interacting is " + check.interacting);
+            box.transform.position = new(0, 160, 0);
+            boxIsInView = true;
+            print("Box moved to 160!");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("player left npc trigger");
-        findBox().transform.position = new(0, -100, 0);
+        print("player left npc trigger and");
+        box.transform.position = new(0, -100, 0);
         boxIsInView = false;
         print("Box moved to -100!");
+        print("boxisinview is " + boxIsInView);
+
     }
 }

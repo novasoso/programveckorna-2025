@@ -6,7 +6,7 @@ public class NPC1DialogueText : MonoBehaviour
     private playerDetecter detector;
     private mainDialogueText tmp;
     int dialogueTrack = 0;
-    public float revealTime = 0.3f;
+    public float revealTime;
     // Start is called before the first frame update
     void Start()
     {
