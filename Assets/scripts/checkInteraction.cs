@@ -3,7 +3,7 @@ using UnityEngine;
 public class checkInteraction : MonoBehaviour
 {
     playerDetecter detecter;
-    GameObject nearbyInteractable;
+    public GameObject nearbyInteractable;
     public bool interacting = false;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class checkInteraction : MonoBehaviour
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E)) // else, if the nearby interactable is NPC and E is pressed
             {
                 interacting = true; //player has interacted
+                print("player is interacting");
                 string getDialogue = nearbyInteractable.name + "DialogueText"; //save the npc's name +"DialogueText" as a string, which is the script containing the given npcs dialogue
                 if (nearbyInteractable.GetComponent(getDialogue)) //returns true if nearby npc has dialogue component that matches string getDialogue
                 {
