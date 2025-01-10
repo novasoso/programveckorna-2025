@@ -6,12 +6,15 @@ public class SpawnEnemyInCombat : MonoBehaviour
 {
     public GameObject enemy;
     Vector3 spawnLocation;
+    EnemyStats stats;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnLocation = new Vector3(0, 0, 0);
-        Instantiate(enemy, spawnLocation, Quaternion.identity);
+        GameObject clone = Instantiate(enemy, spawnLocation, Quaternion.identity);
+        stats = clone.GetComponent<EnemyStats>();
+
     }
 
     // Update is called once per frame
