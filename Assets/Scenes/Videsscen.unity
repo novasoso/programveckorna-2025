@@ -1448,6 +1448,7 @@ GameObject:
   - component: {fileID: 1626678631}
   - component: {fileID: 1626678632}
   - component: {fileID: 1626678633}
+  - component: {fileID: 1626678634}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -1632,6 +1633,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   revealTime: 2
+--- !u!114 &1626678634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626678626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4ee5ed2d309b04cadb1fd8ba1f43e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783384687
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class DialogBoxController : MonoBehaviour
 {
     checkInteraction check;
     List<GameObject> potentialBoxList;
-    private bool isInside;
     private bool boxIsInView = false;
     // Start is called before the first frame update
     void Start()
@@ -39,8 +38,7 @@ public class DialogBoxController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("playered triggered npc");
-        isInside = true;
-        while (boxIsInView == false && isInside == true)
+        if (boxIsInView == false)
         {
             print("in while loop");
             if (check.interacting == true && boxIsInView == false)
@@ -49,13 +47,19 @@ public class DialogBoxController : MonoBehaviour
                 boxIsInView = true;
                 print("Box moved to 160!");
             }
+            else 
+            {
+                return;
+            }
         }
-        
+        else
+        {
+            print("did not enter while loop because box InView is " + boxIsInView + " and check.interacting is " + check.interacting);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isInside = false;
-        print("playered left npc trigger");
+        print("player left npc trigger");
         findBox().transform.position = new(0, -100, 0);
         boxIsInView = false;
         print("Box moved to -100!");
