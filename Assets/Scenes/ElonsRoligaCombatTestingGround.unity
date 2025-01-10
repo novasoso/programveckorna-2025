@@ -1220,7 +1220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2058829120}
   - component: {fileID: 2058829122}
-  - component: {fileID: 2058829121}
   m_Layer: 0
   m_Name: AttackEnemy
   m_TagString: Untagged
@@ -1243,19 +1242,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2058829121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058829117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc109d6bd91cb19479eb629314a03949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDamage: 0
 --- !u!114 &2058829122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyToSearch: {fileID: 6420573336066827175, guid: 93890f03fe5891a43b524373cee24f31, type: 3}
-  FindPlayerStats: {fileID: 0}
+  FindPlayerStats: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
