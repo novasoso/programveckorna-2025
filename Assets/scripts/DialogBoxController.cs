@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogBoxController : MonoBehaviour
 {
-    checkInteraction check;
     public GameObject box;
+    RectTransform boxManipulate;
+    mainDialogueText tmp;
     private bool boxIsInView = true;
     // Start is called before the first frame update
     void Start()
     {
-        check = GameObject.FindGameObjectWithTag("Player").GetComponent<checkInteraction>();
+        boxManipulate = box.GetComponent<RectTransform>();
+        tmp = box.GetComponentInChildren<mainDialogueText>();
     }
 
     // Update is called once per frame
@@ -21,21 +24,17 @@ public class DialogBoxController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("playered triggered npc & boxisinview is "+boxIsInView);
+        tmp.tmpugui.text = "Hey there, buddy.";
+
         while (boxIsInView == false && Input.GetKeyDown(KeyCode.E)==false)
         {
-            box.transform.position = new(0, 160, 0);
+            boxManipulate.transform.position += new Vector3(0, 260, 0);
             boxIsInView = true;
-            print("Box moved to 160!");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("player left npc trigger and");
-        box.transform.position = new(0, -100, 0);
+        boxManipulate.transform.position -= new Vector3(0, 260, 0);
         boxIsInView = false;
-        print("Box moved to -100!");
-        print("boxisinview is " + boxIsInView);
-
     }
 }

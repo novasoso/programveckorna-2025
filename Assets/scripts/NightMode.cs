@@ -13,7 +13,7 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        nightmode();
     }
 
     private void nightmode()
