@@ -6,7 +6,6 @@ public class EnemyStats : MonoBehaviour
 {
     public int EnemyHealth;
     public int EnemyDamage;
-    bool EnemyDeath = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +17,7 @@ public class EnemyStats : MonoBehaviour
     {
         if(EnemyHealth == 0)
         {
-            EnemyDeath = true;
+
         }
     }
 }
