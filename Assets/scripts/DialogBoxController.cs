@@ -7,13 +7,11 @@ using UnityEngine;
 public class DialogBoxController : MonoBehaviour
 {
     public GameObject box;
-    RectTransform boxManipulate;
     mainDialogueText tmp;
     private bool boxIsInView = true;
     // Start is called before the first frame update
     void Start()
     {
-        boxManipulate = box.GetComponent<RectTransform>();
         tmp = box.GetComponentInChildren<mainDialogueText>();
     }
 
@@ -28,13 +26,13 @@ public class DialogBoxController : MonoBehaviour
 
         while (boxIsInView == false && Input.GetKeyDown(KeyCode.E)==false)
         {
-            boxManipulate.transform.position += new Vector3(0, 260, 0);
+            box.transform.position += new Vector3(0, 260, 0);
             boxIsInView = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        boxManipulate.transform.position -= new Vector3(0, 260, 0);
+        box.transform.position -= new Vector3(0, 260, 0);
         boxIsInView = false;
     }
 }
