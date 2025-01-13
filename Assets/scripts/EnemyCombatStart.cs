@@ -25,6 +25,7 @@ public class EnemyCombatStart : MonoBehaviour
         {
             SceneManager.LoadScene(1);
             print("Enemy collides with player");
+            Destroy(gameObject);
         }
     }
 }

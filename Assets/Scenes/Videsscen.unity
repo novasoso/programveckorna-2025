@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 127309628}
   m_Layer: 5
   m_Name: Dialoguebix
-  m_TagString: Untagged
+  m_TagString: dialogue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +479,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -942,6 +942,7 @@ GameObject:
   - component: {fileID: 1253630662}
   - component: {fileID: 1253630666}
   - component: {fileID: 1253630667}
+  - component: {fileID: 1253630668}
   m_Layer: 0
   m_Name: Zhonyas
   m_TagString: Interactable
@@ -1113,6 +1114,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f6c990aa2057f4cac5042f6b67a4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1253630668
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253630661}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.35}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 0.8828125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.2}
+  m_EdgeRadius: 0
 --- !u!1 &1280991974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1257,7 @@ GameObject:
   - component: {fileID: 1457692385}
   m_Layer: 5
   m_Name: dialogue text
-  m_TagString: dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1402,7 +1448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 576553139, guid: 24cc197d562eadf4383e1874977698b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 002a415c14be0f749a964deb3d5f8990, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1436,6 +1482,7 @@ GameObject:
   - component: {fileID: 1626678632}
   - component: {fileID: 1626678633}
   - component: {fileID: 1626678634}
+  - component: {fileID: 1626678635}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -1513,7 +1560,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
 --- !u!212 &1626678629
 SpriteRenderer:
@@ -1556,7 +1603,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b454779d888dbc4cb22f5f53d7407ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 881e60e1b867da44ca9ab20b4a6c3db1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1576,8 +1623,8 @@ Transform:
   m_GameObject: {fileID: 1626678626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9999995, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 6.9999995, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1619,6 +1666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369586b0dbc70684e88288d185111ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeIcon: {fileID: 1612838134}
+  myDialogueIcon: {fileID: 576553139, guid: 24cc197d562eadf4383e1874977698b1, type: 3}
   revealTime: 0.3
 --- !u!114 &1626678634
 MonoBehaviour:
@@ -1633,6 +1682,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 127309627}
+--- !u!61 &1626678635
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626678626}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.3}
+  m_EdgeRadius: 0
 --- !u!1 &1783384687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2095,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6361326503943695448, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361326503943695448, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
       propertyPath: m_Name
       value: player

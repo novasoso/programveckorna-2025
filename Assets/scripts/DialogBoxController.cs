@@ -13,6 +13,9 @@ public class DialogBoxController : MonoBehaviour
     void Start()
     {
         tmp = box.GetComponentInChildren<mainDialogueText>();
+        float skeb = box.transform.position.y;
+        box.transform.position = new(box.transform.position.x, skeb - 260, box.transform.position.z);
+
     }
 
     // Update is called once per frame
