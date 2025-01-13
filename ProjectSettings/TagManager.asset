@@ -7,13 +7,15 @@ TagManager:
   - interactPrompt
   - Interactable
   - NPC
-  - enemy
   - door
+  - dialogue
+  - Environment
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - environment
   - Water
   - UI
   - 
