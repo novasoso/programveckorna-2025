@@ -23,7 +23,7 @@ public class EnemyCombatStart : MonoBehaviour
        
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
             print("Enemy collides with player");
             Destroy(gameObject);
         }
