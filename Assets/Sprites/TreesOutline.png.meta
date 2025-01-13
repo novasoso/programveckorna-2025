@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22d60d43681471b48918b55b7d83ec89
+guid: f56125a5bbeed19429a2cfd6d6ebde6a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 28
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TreesOutline_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 9
+        width: 27
+        height: 90
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45d5cdd5c5892142a156c75c80eba53
+      internalID: 242419722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreesOutline_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 47
+        height: 63
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cf168878a10784c8e77fdbe0587aed
+      internalID: 1504348259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreesOutline_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 8
+        width: 36
+        height: 78
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bb907e14b70204a89a1b5291bd7da8
+      internalID: 665093796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreesOutline_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 5
+        width: 50
+        height: 84
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f30ccd7b9ae3124d8150cdeaf47bb36
+      internalID: 2091699267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreesOutline_4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 4
+        width: 78
+        height: 89
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362d4d99902bdd442be2ba264aa53efa
+      internalID: -918696688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TreesOutline_0: 242419722
+      TreesOutline_1: 1504348259
+      TreesOutline_2: 665093796
+      TreesOutline_3: 2091699267
+      TreesOutline_4: -918696688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
