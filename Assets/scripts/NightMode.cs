@@ -13,10 +13,10 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nightmode();
+        dayMode();
     }
 
-    private void nightmode()
+    private void nightMode()
     {
         gameObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
         isNight = true;

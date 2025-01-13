@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/LeonsL\xE4skigaScenAvEl\xE4ndeOchF\xF6rtvivlan.unity"
     guid: 12a38c207844a194cab25d24b2d5f6ec
   - enabled: 0
@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/room1.unity
     guid: 56bc11e7884239940ad86293724afbb3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ElonsRoligaCombatTestingGround.unity
     guid: 995d78d7a565f0446983b790b2505ba4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Videsscen.unity
     guid: 5e2d7174cce82664a8d0c19647358625
   - enabled: 1
