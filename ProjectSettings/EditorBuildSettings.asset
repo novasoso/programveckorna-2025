@@ -22,8 +22,9 @@ EditorBuildSettings:
     guid: 56bc11e7884239940ad86293724afbb3
   - enabled: 1
     path: Assets/Scenes/ElonsCombatTesting.unity
+    guid: 995d78d7a565f0446983b790b2505ba4
   - enabled: 0
-    path: Assets/Scenes/ElonsRoligaCombatTestingGround.unity
+    path: Assets/Scenes/ElonsCombatTesting.unity
     guid: 995d78d7a565f0446983b790b2505ba4
   - enabled: 1
     path: Assets/Scenes/Videsscen.unity
