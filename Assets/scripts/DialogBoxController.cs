@@ -7,35 +7,29 @@ using UnityEngine;
 public class DialogBoxController : MonoBehaviour
 {
     public GameObject box;
-    mainDialogueText tmp;
-    private bool boxIsInView = true;
+    playerDetecter  vhjkjlk;
+    float moveBox;
     // Start is called before the first frame update
     void Start()
     {
-        tmp = box.GetComponentInChildren<mainDialogueText>();
-        float skeb = box.transform.position.y;
-        box.transform.position = new(box.transform.position.x, skeb - 260, box.transform.position.z);
-
+        moveBox = box.transform.localPosition.y;
+        box.transform.localPosition = new(box.transform.localPosition.x, moveBox - 140, box.transform.localPosition.z);
+        vhjkjlk = GetComponent<playerDetecter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        tmp.tmpugui.text = "Hey there, buddy.";
-
-        while (boxIsInView == false && Input.GetKeyDown(KeyCode.E)==false)
+        if (vhjkjlk.PlayerDetected == true && Input.GetKeyDown(KeyCode.E))
         {
-            box.transform.position += new Vector3(0, 260, 0);
-            boxIsInView = true;
+            box.transform.localPosition = new( box.transform.localPosition.x, moveBox);
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        box.transform.position -= new Vector3(0, 260, 0);
-        boxIsInView = false;
+        else if (vhjkjlk.PlayerDetected == false)
+        {
+            if(box.transform.localPosition.y > moveBox - 270)
+            {
+                box.transform.localPosition -= new Vector3(0, 270, 0);
+            }
+        }
     }
 }

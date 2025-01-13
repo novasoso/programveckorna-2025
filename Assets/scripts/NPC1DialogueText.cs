@@ -21,7 +21,7 @@ public class NPC1DialogueText : MonoBehaviour
         detector = GetComponent<playerDetecter>(); //assign MY playerDetecter script
         interactScript = GameObject.FindGameObjectWithTag("Player").GetComponent<checkInteraction>(); // find and assign Player's checkInteraction script
         changeThis = changeIcon.GetComponent<Image>();
-        tmp = GameObject.FindGameObjectWithTag("dialogue").GetComponent<mainDialogueText>();
+        tmp = GameObject.FindGameObjectWithTag("dialogue").GetComponentInChildren<mainDialogueText>();
     }
     public void Dialogue()
     {
