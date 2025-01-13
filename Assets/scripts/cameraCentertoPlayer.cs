@@ -1,18 +1,21 @@
 using UnityEngine;
 public class cameraCentertoPlayer : MonoBehaviour
 {
-    GameObject player;
-    Vector3 playerPosition;
     // Start is called before the first frame update
+    private GameObject player;
+    private Vector3 offset = new Vector3(0, 0, -10);
+    public float smoothSpeed = 0.125f; // Smoothing factor
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player"); //find player
+        player = GameObject.FindGameObjectWithTag("Player"); // Find player
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate() // Use LateUpdate for smoother camera movement
     {
-        playerPosition = player.transform.position; // update player position;
-        transform.position = new Vector3 (playerPosition.x, playerPosition.y, -10); //center camera to preferred position
+        Vector3 desiredPosition = player.transform.position + offset; // Calculate desired position
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed); // Smoothly interpolate to the desired position
+        transform.position = smoothedPosition; // Update camera position
     }
 }
