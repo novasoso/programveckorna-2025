@@ -1353,9 +1353,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 19775093}
+    - target: {fileID: 3275867354028907921, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6420573336066827175, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
       propertyPath: m_Name
       value: Enemy#1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742616015409468312, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742616015409468312, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7742616015409468312, guid: 5e0bd14c30fc63343b222c503296d588, type: 3}
       propertyPath: m_LocalPosition.x
