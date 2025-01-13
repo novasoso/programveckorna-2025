@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94a1a33f835e5394ab1d8c0a881a1a0b
+guid: 5be188baf00224c4994a00ebc0d65a22
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,97 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreesShadowed_0
+      name: Rocks_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 8
-        width: 27
-        height: 91
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d39770d5c34f69a4ebe1a60d2fe1eb22
-      internalID: 1449429409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesShadowed_1
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 7
-        width: 47
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 097ebc0899bdf13469853f2e0c731028
-      internalID: 1776178567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesShadowed_2
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 7
-        width: 36
-        height: 79
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12933f841e5d3da489a5b32e20ac4984
-      internalID: 48982262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesShadowed_3
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 4
-        width: 50
-        height: 85
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a524573b5c1cbd74d8e90a71a855e14d
-      internalID: -1492465756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesShadowed_4
-      rect:
-        serializedVersion: 2
-        x: 230
+        x: 0
         y: 3
-        width: 78
-        height: 90
+        width: 22
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +124,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 135023a4a7cc33d4797a4f6a43da55e5
-      internalID: -556902552
+      spriteID: 2c7fde306196c374291ee2c832e1292f
+      internalID: -204384171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2
+        width: 60
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e69a4a8f398faa4d89e01804d38d958
+      internalID: 275777499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1
+        width: 59
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9baaea67ef32f44b708bace434d4b6
+      internalID: -1471490168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rocks_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 50
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c0b2f911c5d00458bb6e80def5ea1f
+      internalID: -1406181257
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TreesShadowed_0: 1449429409
-      TreesShadowed_1: 1776178567
-      TreesShadowed_2: 48982262
-      TreesShadowed_3: -1492465756
-      TreesShadowed_4: -556902552
+      Rocks_0: -204384171
+      Rocks_1: 275777499
+      Rocks_2: -1471490168
+      Rocks_3: -1406181257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
