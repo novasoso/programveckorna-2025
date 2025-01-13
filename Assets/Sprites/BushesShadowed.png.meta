@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f56125a5bbeed19429a2cfd6d6ebde6a
+guid: 81c8525723e468d47951ab2447c98540
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,106 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreesOutline_0
+      name: BushesShadowed_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 9
-        width: 27
-        height: 90
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 2
+        y: 1
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d45d5cdd5c5892142a156c75c80eba53
-      internalID: 242419722
+      spriteID: bfa1d5cef416ced4a801c8be9475062f
+      internalID: 1372704699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesOutline_1
+      name: BushesShadowed_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 47
-        height: 63
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 35
+        y: 2
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7cf168878a10784c8e77fdbe0587aed
-      internalID: 1504348259
+      spriteID: 37b8367fe00d55345ac9fca558383b6e
+      internalID: 1190245541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesOutline_2
+      name: BushesShadowed_2
       rect:
         serializedVersion: 2
-        x: 118
-        y: 8
-        width: 36
-        height: 78
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 62
+        y: 2
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7bb907e14b70204a89a1b5291bd7da8
-      internalID: 665093796
+      spriteID: aac29818f0a91454aaaf0b3782e5bba1
+      internalID: 1576800559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesOutline_3
+      name: BushesShadowed_3
       rect:
         serializedVersion: 2
-        x: 171
-        y: 5
-        width: 50
-        height: 84
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 95
+        y: 2
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f30ccd7b9ae3124d8150cdeaf47bb36
-      internalID: 2091699267
+      spriteID: fb594bc6d1552204d9bc7655f12fcdc0
+      internalID: -1207742256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesOutline_4
+      name: BushesShadowed_4
       rect:
         serializedVersion: 2
-        x: 230
-        y: 4
-        width: 78
-        height: 89
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        x: 130
+        y: 1
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 362d4d99902bdd442be2ba264aa53efa
-      internalID: -918696688
+      spriteID: 7e5c2022dd864e143b1fd784302edfdb
+      internalID: 610527482
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TreesOutline_0: 242419722
-      TreesOutline_1: 1504348259
-      TreesOutline_2: 665093796
-      TreesOutline_3: 2091699267
-      TreesOutline_4: -918696688
+      BushesShadowed_0: 1372704699
+      BushesShadowed_1: 1190245541
+      BushesShadowed_2: 1576800559
+      BushesShadowed_3: -1207742256
+      BushesShadowed_4: 610527482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
