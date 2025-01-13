@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6351423254732542771}
   m_Layer: 0
   m_Name: Rocks_2
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0038042068, y: -0.45639253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.84375, y: 1.71875}
     newSize: {x: 1.18, y: 1.1}
     adaptiveTilingThreshold: 0.5
