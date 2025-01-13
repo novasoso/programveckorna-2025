@@ -22,7 +22,7 @@ public class interact : MonoBehaviour
             transform.position = new Vector3(1000, 1000);
         }else
         {
-            transform.position = new Vector3(xything.playerx, xything.playery+2);
+            transform.position = new Vector3(xything.playerx, xything.playery);
         }
     }
 }

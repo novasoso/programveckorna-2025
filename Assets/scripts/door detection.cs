@@ -20,7 +20,6 @@ public class doordetection : MonoBehaviour
     {
         playerx = transform.position.x;
         playery = transform.position.y;
-        wa = 0;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,5 +31,9 @@ public class doordetection : MonoBehaviour
             }
             wa = 1;
         }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        wa = 0;
     }
 }
