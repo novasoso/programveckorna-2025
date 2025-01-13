@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94a1a33f835e5394ab1d8c0a881a1a0b
+guid: 1e355bd6fdf931d49b532e794860bcf5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,106 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreesShadowed_0
+      name: Paths_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 8
-        width: 27
-        height: 91
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 26
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d39770d5c34f69a4ebe1a60d2fe1eb22
-      internalID: 1449429409
+      spriteID: e38634a90f4e32046a1b9b40bee1548e
+      internalID: 196691699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesShadowed_1
+      name: Paths_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 7
-        width: 47
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 26
+        y: 26
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 097ebc0899bdf13469853f2e0c731028
-      internalID: 1776178567
+      spriteID: fb990e5a45e191c4ea3b731a0976209e
+      internalID: 1074742785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesShadowed_2
+      name: Paths_2
       rect:
         serializedVersion: 2
-        x: 118
-        y: 7
-        width: 36
-        height: 79
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12933f841e5d3da489a5b32e20ac4984
-      internalID: 48982262
+      spriteID: 2691217a73a025441b6135c8e68975b0
+      internalID: 1398188310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesShadowed_3
+      name: Paths_3
       rect:
         serializedVersion: 2
-        x: 171
-        y: 4
-        width: 50
-        height: 85
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 26
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a524573b5c1cbd74d8e90a71a855e14d
-      internalID: -1492465756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesShadowed_4
-      rect:
-        serializedVersion: 2
-        x: 230
-        y: 3
-        width: 78
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 135023a4a7cc33d4797a4f6a43da55e5
-      internalID: -556902552
+      spriteID: 6b0cf53c4e243ec458f51021d33dc53b
+      internalID: -1835898858
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TreesShadowed_0: 1449429409
-      TreesShadowed_1: 1776178567
-      TreesShadowed_2: 48982262
-      TreesShadowed_3: -1492465756
-      TreesShadowed_4: -556902552
+      Paths_0: 196691699
+      Paths_1: 1074742785
+      Paths_2: 1398188310
+      Paths_3: -1835898858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
