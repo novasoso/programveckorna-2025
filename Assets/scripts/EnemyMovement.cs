@@ -4,10 +4,10 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform player;
     public float speed = 2.0f;
-
-    void Update()
+    public bool inChase = false;
+    public void imChasinYouGraaahhhhhh()
     {
-        if (player != null)
+        if (player != null && inChase == true)
         {
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;

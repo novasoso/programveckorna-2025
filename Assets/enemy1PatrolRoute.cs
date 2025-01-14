@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class enemy1PatrolRoute : MonoBehaviour
 {
+    EnemyMovement chaseSequence;
     Rigidbody2D rb;
+
     Vector3 point1;
     Vector3 point2;
     Vector3 point3;
@@ -19,6 +22,7 @@ public class enemy1PatrolRoute : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        chaseSequence = GetComponent<EnemyMovement>();
         rb = GetComponent<Rigidbody2D>();
         findRoute(transform.position);
         walkingToPoint1 = true;
@@ -27,65 +31,63 @@ public class enemy1PatrolRoute : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (walkingToPoint1)
+        if (chaseSequence.inChase == false)
         {
-            print("walking to point1");
-            if (transform.position == point1)
+            if (walkingToPoint1)
             {
-                print("i am at point1, my current location is " + transform.position + " compared to point1 " + point1);
-                walkingToPoint1 = false;
-                walkingToPoint2 = true;
+                if (atTarget(point1))
+                {
+                    walkingToPoint1 = false;
+                    walkingToPoint2 = true;
+                }
+                else
+                {
+                    getToPoint(point1);
+                }
             }
-            else
+            else if (walkingToPoint2)
             {
-                getToPoint(point1);
+                if (atTarget(point2))
+                {
+                    walkingToPoint2 = false;
+                    walkingToPoint3 = true;
+                }
+                else
+                {
+                    getToPoint(point2);
+                }
+            }
+            else if (walkingToPoint3)
+            {
+                if (atTarget(point3))
+                {
+                    walkingToPoint3 = false;
+                    walkingToPoint4 = true;
+                }
+                else
+                {
+                    getToPoint(point3);
+                }
+            }
+            else if (walkingToPoint4)
+            {
+                if (atTarget(point4))
+                {
+                    walkingToPoint4 = false;
+                    walkingToPoint1 = true;
+                }
+                else
+                {
+                    getToPoint(point4);
+                }
             }
         }
-        else if (walkingToPoint2)
+        else
         {
-            print("walking to point2");
-            if (transform.position == point2)
-            {
-                print("i am at point2, my current location is " + transform.position + " compared to point2 " + point2);
-                walkingToPoint2 = false;
-                walkingToPoint3 = true;
-            }
-            else
-            {
-                getToPoint(point2);
-            }
+            chaseSequence.imChasinYouGraaahhhhhh();
         }
-        else if (walkingToPoint3)
-        {
-            print("walking to point3");
-            if (transform.position == point3)
-            {
-                print("i am at point3, my current location is " + transform.position + " compared to point3 " + point3);
-                walkingToPoint3 = false;
-                walkingToPoint4 = true;
-            }
-            else
-            {
-                getToPoint(point3);
-            }
-        }
-        else if (walkingToPoint4)
-        {
-            print("walking to point4");
-            if (transform.position == point4)
-            {
-                print("i am at point4, my current location is " + transform.position + " compared to point4 " + point4);
-                walkingToPoint4 = false;
-                walkingToPoint1 = true;
-            }
-            else
-            {
-                getToPoint(point4);
-            }
-        }
-        
     }
-
+    
     private void findRoute(Vector2 myPosition)
     {
         point1.x = myPosition.x + Random.Range(3, 3);
@@ -110,20 +112,76 @@ public class enemy1PatrolRoute : MonoBehaviour
     }
     private void getToPoint(Vector2 point)
     {
-        while(transform.position.x != point.x)
+        bool atPointX =false;
+        if(atPointX == false)
         {
-            if (transform.position.x > point.x)
+            if (atOneTarget(transform.position.x, point.x))
             {
-                rb.velocity = new(0, walkSpeed);
+                rb.velocity = new(0, 0);
+                atPointX = true;
+            }
+            else if (transform.position.x > point.x)
+            {
+                rb.velocity = new(-walkSpeed, 0);
             }
             else if (transform.position.x < point.x)
             {
-                rb.velocity = new(0, -walkSpeed);
+                rb.velocity = new(walkSpeed, 0);
             }
-            else if (transform.position.x == point.x)
+        }
+        
+        if (atPointX == true)
+        {
+            if (atOneTarget(transform.position.y, point.y))
             {
                 rb.velocity = new(0, 0);
             }
+            else if (transform.position.y > point.y)
+            {
+                rb.velocity = new(rb.velocity.x, -walkSpeed);
+            }
+            else if (transform.position.y < point.y)
+            {
+                rb.velocity = new(rb.velocity.x, walkSpeed);
+            }
+        }
+    }
+    bool atTarget(Vector2 point)
+    {
+        if (atOneTarget(transform.position.x, point.x))
+        {
+            if (atOneTarget(transform.position.y, point.y))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    bool atOneTarget(float myLocation, float target)
+    {
+        if (myLocation <= target + 0.1 && myLocation >= target - 0.1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && chaseSequence.inChase == false)
+        {
+            rb.velocity = new(0, 0);
+            chaseSequence.inChase = true;
         }
     }
 }

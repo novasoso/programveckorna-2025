@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,20 +7,41 @@ public class NightMode : MonoBehaviour
     public Color changeEnvironmentHue;
     public Color changeInteractableHue;
     public Color dayHue;
-    public bool isNight = false;
+    public bool isNight = true;
     public List<GameObject> gameObjects;
     public float cycle = 0f;
-    public int day = 0;
-    public int night = 0;
+    public GameObject enemyToSummon1;
+    public int noOfEnemies;
     // Start is called before the first frame update
     void Start()
     {
-        nightMode();
+        
+    }
+    void Update()
+    {
+        cycle += Time.deltaTime;
+        if (cycle >= 360)
+        {
+            cycle = 0;
+            if (isNight == false)
+            {
+                nightMode();
+                for (int i = 0; i < noOfEnemies; i++)
+                {
+                    summon();
+                }
+                isNight = true;
+            }
+            else if (isNight)
+            {
+                dayMode();
+                isNight = false;
+            }
+        }
     }
 
     private void nightMode()
     {
-        night = 1;
         gameObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
         isNight = true;
         foreach (GameObject obj in gameObjects)
@@ -57,7 +77,6 @@ public class NightMode : MonoBehaviour
 
     private void dayMode()
     {
-        day = 1;
         gameObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
         isNight = false;
         foreach (GameObject obj in gameObjects)
@@ -86,21 +105,33 @@ public class NightMode : MonoBehaviour
             }
         }
     }
-    void Update()
+    private void summon()
     {
-        cycle += Time.deltaTime;
-        if (cycle >= 360)
+        if(enemyToSummon1 != null && isNight)
         {
-            cycle = 0;
-            if (day == 1 && night == 0)
+            Vector2 spawnHere = new(10, 10);
+;           GameObject ligma = GameObject.FindGameObjectWithTag("Player");
+            Vector4 playersNoNoSquare = areaOfNuhUh(ligma.transform.position);
+            if (spawnHere.x!<playersNoNoSquare.x && spawnHere.x !> playersNoNoSquare.y && spawnHere.y !< playersNoNoSquare.z && spawnHere.y !> playersNoNoSquare.w)
             {
-                nightMode();
-                day = 0;
-            }else if (night == 1 && day == 0)
+                print("ligma");
+                GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), new Quaternion(0, 0, 0, 0));
+            }
+            else
             {
-                dayMode();
-                night = 0;
+                float randomValue0 = Random.Range(ligma.transform.position.x-20, ligma.transform.position.x+20);
+                float randomValue1 = Random.Range(ligma.transform.position.y - 20, ligma.transform.position.y + 20);
             }
         }
+    }
+
+    private Vector4 areaOfNuhUh(Vector2 playerPosiition)
+    {
+        Vector4 boxOfLimit;
+        boxOfLimit.x = playerPosiition.x + 7;
+        boxOfLimit.y = playerPosiition.x - 7;
+        boxOfLimit.z = playerPosiition.y + 7;
+        boxOfLimit.w = playerPosiition.y - 7;
+        return boxOfLimit;
     }
 }
