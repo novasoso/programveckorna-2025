@@ -7,12 +7,13 @@ public class NightMode : MonoBehaviour
     public Color changeEnvironmentHue;
     public Color changeInteractableHue;
     public Color dayHue;
-    public bool isNight = true;
+    public bool isNight = false;
     public List<GameObject> gameObjects;
     public float cycle = 0f;
     public GameObject enemyToSummon1;
     public int noOfEnemies;
     public float areaOfPotentialSpawn;
+    public int areaOfNoNoSquare;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,7 @@ public class NightMode : MonoBehaviour
             if (isNight == false)
             {
                 nightMode();
-                for (int i = 0; i < noOfEnemies; i++)
-                {
-                    summon();
-                }
+                summon();
                 isNight = true;
             }
             else if (isNight)
@@ -108,20 +106,34 @@ public class NightMode : MonoBehaviour
     }
     private void summon()
     {
-        GameObject ligma = GameObject.FindGameObjectWithTag("Player");
-        Vector4 playersNoNoSquare = areaOfNuhUh(ligma.transform.position);
+        print("summon");
+        print(isNight);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector4 playersNoNoSquare = areaOfNuhUh(player.transform.position);
+        int index = 0;
+
         if (enemyToSummon1 != null && isNight)
         {
-            Vector2 spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
-            if (spawnHere.x!<playersNoNoSquare.x && spawnHere.x !> playersNoNoSquare.y && spawnHere.y !< playersNoNoSquare.z && spawnHere.y !> playersNoNoSquare.w)
+            while (index < 3)
             {
-                print("ligma");
-                GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), new Quaternion(0, 0, 0, 0));
-            }
-            else
-            {
-                spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
-                return;
+                Vector2 spawnHere = new Vector2(
+                    Random.Range(player.transform.position.x - areaOfPotentialSpawn, player.transform.position.x + areaOfPotentialSpawn),
+                    Random.Range(player.transform.position.y - areaOfPotentialSpawn, player.transform.position.y + areaOfPotentialSpawn)
+                );
+
+                if (spawnHere.x > playersNoNoSquare.x && spawnHere.y > playersNoNoSquare.z ||
+                    spawnHere.x < playersNoNoSquare.y && spawnHere.y > playersNoNoSquare.z ||
+                    spawnHere.x > playersNoNoSquare.x && spawnHere.y < playersNoNoSquare.w ||
+                    spawnHere.x < playersNoNoSquare.y && spawnHere.y < playersNoNoSquare.w)
+                {
+                    print("yep i can spawn there at "+spawnHere);
+                    GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), Quaternion.identity);
+                    index++;
+                }
+                else
+                {
+                    print(" i cant spawn at " + spawnHere);
+                }
             }
         }
     }
@@ -129,10 +141,11 @@ public class NightMode : MonoBehaviour
     private Vector4 areaOfNuhUh(Vector2 playerPosiition)
     {
         Vector4 boxOfLimit;
-        boxOfLimit.x = playerPosiition.x + 7;
-        boxOfLimit.y = playerPosiition.x - 7;
-        boxOfLimit.z = playerPosiition.y + 7;
-        boxOfLimit.w = playerPosiition.y - 7;
+        boxOfLimit.x = playerPosiition.x + areaOfNoNoSquare;
+        boxOfLimit.y = playerPosiition.x - areaOfNoNoSquare;
+        boxOfLimit.z = playerPosiition.y + areaOfNoNoSquare;
+        boxOfLimit.w = playerPosiition.y - areaOfNoNoSquare;
         return boxOfLimit;
     }
+
 }

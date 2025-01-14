@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = 20;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -18,8 +18,9 @@ public class PlayerStats : MonoBehaviour
     {
         if(playerHealth <= 0)
         {
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
             print("you died");
+            playerHealth = 30;
         }
     }
 }

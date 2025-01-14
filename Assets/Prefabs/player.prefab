@@ -103,6 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9faec7ebc3c9ab4d9453f216ddcf344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facingSouth: {fileID: 0}
+  facingWest: {fileID: 0}
+  facingEast: {fileID: 0}
+  facingNorth: {fileID: 0}
   moveSpeed: 5
 --- !u!50 &5532637549483727274
 Rigidbody2D:
@@ -203,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamage: 3
+  playerHealth: 30
 --- !u!114 &4124068244650333888
 MonoBehaviour:
   m_ObjectHideFlags: 0
