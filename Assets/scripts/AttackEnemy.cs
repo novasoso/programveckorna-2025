@@ -2,20 +2,28 @@ using UnityEngine;
 
 public class AttackEnemy : MonoBehaviour
 {
+    public GameObject turns;
+    PlayerAndEnemyTurns accessTurns;
     PlayerStats playerDamage;
-    EnemyStats foundEnemyHealth;
-    public GameObject EnemyToSearch;
+    public EnemyStats foundEnemyHealth;
     public GameObject FindPlayerStats;
     private void Start()
     {
-        foundEnemyHealth = EnemyToSearch.GetComponent<EnemyStats>();
+        accessTurns = turns.GetComponent<PlayerAndEnemyTurns>();
         playerDamage = FindPlayerStats.GetComponent<PlayerStats>();
         
+        //invoke("sigma", 10f)
     }
     public void attackEnemy()
     {
-        foundEnemyHealth.EnemyHealth -= playerDamage.playerDamage;
-        print("Player dealt " + playerDamage.playerDamage + " and the enemy now has " + foundEnemyHealth.EnemyHealth);
+        if (accessTurns.playersTurn == true)
+        {
+            foundEnemyHealth.EnemyHealth -= playerDamage.playerDamage;
+            accessTurns.playersTurn = false;
+
+            print("Player dealt " + playerDamage.playerDamage + " and the enemy now has " + foundEnemyHealth.EnemyHealth);
+        }
+       
     }
 
 }
