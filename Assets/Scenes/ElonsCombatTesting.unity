@@ -401,6 +401,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1278948728}
+  - {fileID: 1485982345}
   m_Father: {fileID: 1373013987}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -451,7 +452,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 453932495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1485982344}
+        m_TargetAssemblyTypeName: BlockEnemyAttack, Assembly-CSharp
+        m_MethodName: blockEnemyAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &453932495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,6 +1314,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1485982343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485982345}
+  - component: {fileID: 1485982344}
+  m_Layer: 0
+  m_Name: DefendFunction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1485982344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485982343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a1b847d22d8e247b57a4b5256fc5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turns: {fileID: 433119688}
+  isBlocking: 0
+--- !u!4 &1485982345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485982343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 355.37088, y: 143.15477, z: 0.77426213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453932493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545938401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5985d88bd3bd24c96542c001579ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockingFunction: {fileID: 1485982343}
   turns: {fileID: 433119688}
   foundEnemyDamage: {fileID: 6329976915342557327, guid: 93890f03fe5891a43b524373cee24f31, type: 3}
   FindPlayerHealth: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
