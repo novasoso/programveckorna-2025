@@ -14,7 +14,7 @@ public class playerhealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("ElonsRoligaScen");
         }
     }
 }
