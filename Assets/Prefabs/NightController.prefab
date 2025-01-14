@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 127820045521951028}
   - component: {fileID: 5807987330617110473}
   m_Layer: 0
-  m_Name: NightControler
+  m_Name: NightController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,3 +49,6 @@ MonoBehaviour:
   dayHue: {r: 1, g: 1, b: 1, a: 1}
   isNight: 0
   gameObjects: []
+  cycle: 0
+  day: 0
+  night: 0

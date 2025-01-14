@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    public Sprite facingSouth;
+    public Sprite facingWest;
+    public Sprite facingEast;
+    public Sprite facingNorth;
     public float moveSpeed = 5f;
     // Start is called before the first frame update
     void Start()
