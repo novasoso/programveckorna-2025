@@ -93,22 +93,18 @@ public class enemy1PatrolRoute : MonoBehaviour
         point1.x = myPosition.x + Random.Range(3, 3);
         point1.y = point1.x;
         point1.z = 0;
-        print(point1);
 
         point2.x = myPosition.x - Random.Range(3, 3);
         point2.y = -point2.x;
         point2.z = 0;
-        print(point2);
 
         point3.x = myPosition.x - Random.Range(3, 3);
         point3.y = point3.x;
         point3.z = 0;
-        print(point3);
 
         point4.x = myPosition.x + Random.Range(3, 3);
         point4.y = -point4.x;
         point4.z = 0;
-        print(point4);
     }
     private void getToPoint(Vector2 point)
     {

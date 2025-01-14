@@ -1178,7 +1178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: cycle
-      value: 359
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: noOfEnemies
@@ -1189,8 +1189,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2014327763}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
+      propertyPath: areaOfNoNoSquare
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: areaOfPotentialSpawn
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7433722437875018175, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: m_Name
