@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     {
         if(playerHealth <= 0)
         {
-            //SceneManager.LoadScene(0);
+            SceneManager.LoadScene("die scene");
             print("you died");
             playerHealth = 30;
         }
