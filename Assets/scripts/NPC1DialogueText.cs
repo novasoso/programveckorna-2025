@@ -14,8 +14,6 @@ public class NPC1DialogueText : MonoBehaviour
     public Sprite myDialogueIcon;
     public int dialogueTrack = 0;
     public float revealTime;
-    hehehh activator;
-    public int skibidi = 0;
     // Start is called before the first frame update
     void Start()
     {
