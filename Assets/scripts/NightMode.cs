@@ -110,17 +110,26 @@ public class NightMode : MonoBehaviour
     {
         GameObject ligma = GameObject.FindGameObjectWithTag("Player");
         Vector4 playersNoNoSquare = areaOfNuhUh(ligma.transform.position);
+
         if (enemyToSummon1 != null && isNight)
         {
-            Vector2 spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
-            if (spawnHere.x!<playersNoNoSquare.x && spawnHere.x !> playersNoNoSquare.y && spawnHere.y !< playersNoNoSquare.z && spawnHere.y !> playersNoNoSquare.w)
+            Vector2 spawnHere = new Vector2(
+                Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn),
+                Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn)
+            );
+
+            if (spawnHere.x < playersNoNoSquare.x && spawnHere.x > playersNoNoSquare.y &&
+                spawnHere.y < playersNoNoSquare.z && spawnHere.y > playersNoNoSquare.w)
             {
                 print("ligma");
-                GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), new Quaternion(0, 0, 0, 0));
+                GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), Quaternion.identity);
             }
             else
             {
-                spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
+                spawnHere = new Vector2(
+                    Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn),
+                    Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn)
+                );
                 return;
             }
         }
@@ -135,4 +144,5 @@ public class NightMode : MonoBehaviour
         boxOfLimit.w = playerPosiition.y - 7;
         return boxOfLimit;
     }
+
 }

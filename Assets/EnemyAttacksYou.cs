@@ -16,7 +16,7 @@ public class EnemyAttacksYou : MonoBehaviour
     void Start()
     {
         accessTurns = turns.GetComponent<PlayerAndEnemyTurns>();
-        playerHealth = FindPlayerHealth.GetComponent<PlayerStats>();
+        playerHealth = FindAnyObjectByType<PlayerStats>();
         isBlocking = blockingFunction.GetComponent<BlockEnemyAttack>();
     }
 
