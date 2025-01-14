@@ -12,6 +12,7 @@ public class NightMode : MonoBehaviour
     public float cycle = 0f;
     public GameObject enemyToSummon1;
     public int noOfEnemies;
+    public float areaOfPotentialSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,11 +108,11 @@ public class NightMode : MonoBehaviour
     }
     private void summon()
     {
-        if(enemyToSummon1 != null && isNight)
+        GameObject ligma = GameObject.FindGameObjectWithTag("Player");
+        Vector4 playersNoNoSquare = areaOfNuhUh(ligma.transform.position);
+        if (enemyToSummon1 != null && isNight)
         {
-            Vector2 spawnHere = new(10, 10);
-;           GameObject ligma = GameObject.FindGameObjectWithTag("Player");
-            Vector4 playersNoNoSquare = areaOfNuhUh(ligma.transform.position);
+            Vector2 spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
             if (spawnHere.x!<playersNoNoSquare.x && spawnHere.x !> playersNoNoSquare.y && spawnHere.y !< playersNoNoSquare.z && spawnHere.y !> playersNoNoSquare.w)
             {
                 print("ligma");
@@ -119,8 +120,8 @@ public class NightMode : MonoBehaviour
             }
             else
             {
-                float randomValue0 = Random.Range(ligma.transform.position.x-20, ligma.transform.position.x+20);
-                float randomValue1 = Random.Range(ligma.transform.position.y - 20, ligma.transform.position.y + 20);
+                spawnHere = new(Random.Range(ligma.transform.position.x - areaOfPotentialSpawn, ligma.transform.position.x + areaOfPotentialSpawn), Random.Range(ligma.transform.position.y - areaOfPotentialSpawn, ligma.transform.position.y + areaOfPotentialSpawn));
+                return;
             }
         }
     }
