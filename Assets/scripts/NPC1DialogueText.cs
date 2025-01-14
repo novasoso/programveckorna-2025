@@ -12,8 +12,10 @@ public class NPC1DialogueText : MonoBehaviour
     private Image changeThis;
     private mainDialogueText tmp;
     public Sprite myDialogueIcon;
-    int dialogueTrack = 0;
+    public int dialogueTrack = 0;
     public float revealTime;
+    hehehh activator;
+    public int skibidi = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class NPC1DialogueText : MonoBehaviour
         changeThis = changeIcon.GetComponent<Image>();
         tmp = GameObject.FindGameObjectWithTag("dialogue").GetComponentInChildren<mainDialogueText>();
     }
+
     public void Dialogue()
     {
         while (detector.PlayerDetected == true && interactScript.interacting == true)
@@ -50,6 +53,7 @@ public class NPC1DialogueText : MonoBehaviour
             }
             dialogueTrack++;
             interactScript.interacting = false;
+
         }
     }
 }
