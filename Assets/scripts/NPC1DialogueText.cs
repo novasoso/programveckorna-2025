@@ -30,23 +30,23 @@ public class NPC1DialogueText : MonoBehaviour
             changeThis.sprite = myDialogueIcon;
             if (dialogueTrack == 0)
             {
-                tmp.StartRevealText("insert dialogue track1", revealTime); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
+                tmp.StartRevealText("I'm mr sigma guy", revealTime); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
             else if (dialogueTrack == 1)
             {
-                tmp.StartRevealText("insert dialogue track2", revealTime);
+                tmp.StartRevealText("I eat sigma", revealTime);
             }
             else if (dialogueTrack == 2)
             {
-                tmp.StartRevealText("insert dialogue track3", revealTime);
+                tmp.StartRevealText("You're not sigma", revealTime);
             }
             else if (dialogueTrack == 3)
             {
-                tmp.StartRevealText("insert dialogue track4", revealTime);
+                tmp.StartRevealText("Get items to become sigma", revealTime);
             }
             else if (dialogueTrack >= 4)
             {
-                tmp.StartRevealText("insert dialogue track5", revealTime);
+                tmp.StartRevealText("Open inventory with I for a little more sigma", revealTime);
             }
             dialogueTrack++;
             interactScript.interacting = false;
