@@ -18,7 +18,6 @@ public class InventoryCenter : MonoBehaviour
     {
         inventoryWIP = 0;
         rb = GetComponent<Rigidbody2D>();
-        print(sigma);
     }
 
     // Update is called once per frame

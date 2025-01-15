@@ -13,7 +13,7 @@ public class NPC1DialogueText : MonoBehaviour
     private mainDialogueText tmp;
     public Sprite myDialogueIcon;
     public int dialogueTrack = 0;
-    public float revealTime;
+    public float zibzab;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,23 +31,23 @@ public class NPC1DialogueText : MonoBehaviour
             changeThis.sprite = myDialogueIcon;
             if (dialogueTrack == 0)
             {
-                tmp.StartRevealText("I'm the Builder NPC", revealTime); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
+                tmp.StartRevealText("I'm the Builder NPC", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
             else if (dialogueTrack == 1)
             {
-                tmp.StartRevealText("it will turn night in about 30 seconds, scary monsters will come from the shadows to eat you", revealTime);
+                tmp.StartRevealText("it will turn night in about 30 seconds, scary monsters will come from the shadows to eat you", zibzab);
             }
             else if (dialogueTrack == 2)
             {
-                tmp.StartRevealText("i like building things :)", revealTime);
+                tmp.StartRevealText("i like building things :)", zibzab);
             }
             else if (dialogueTrack == 3)
             {
-                tmp.StartRevealText("you can pick up items sometimes", revealTime);
+                tmp.StartRevealText("you can pick up items sometimes", zibzab);
             }
             else if (dialogueTrack >= 4)
             {
-                tmp.StartRevealText("Open inventory with I", revealTime);
+                tmp.StartRevealText("Open inventory with I", zibzab);
             }
             dialogueTrack++;
             interactScript.interacting = false;
