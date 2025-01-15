@@ -17,40 +17,45 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dayMode();
     }
     void Update()
     {
-        cycle += Time.deltaTime;
+        cycle += Time.deltaTime; //Vide used MY code and ruined it with these TRASH names!!
         if (cycle >= 360)
         {
             cycle = 0;
-            if (isNight == false)
+            if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
-                nightMode();
                 summon();
+                nightMode();
                 isNight = true;
             }
             else if (isNight)
             {
                 dayMode();
-                isNight = false;
+                isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha buddy
             }
         }
     }
 
-    private void nightMode()
+    private void nightMode() //since we changing eachothers code now, why dont i mess with YOUR code for a change. Check NPC1DialogueText. You're done heh
     {
         gameObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
         isNight = true;
         foreach (GameObject obj in gameObjects)
         {
-            if (obj.CompareTag("Environment"))
+            Image image = obj.GetComponent<Image>();
+            if (obj.name == "darkness" && image != null)
+            {
+                print("i found darkness buddy im making him kinda opaque");
+                image.color = new Color (0.068f, 0.081f, 0.137f, 0.98f);
+            }
+            else if (obj.CompareTag("Environment"))
             {
                 SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
                 if (spriteRenderer == null)
                 {
-                    Image image = obj.GetComponent<Image>();
                     image.color = changeEnvironmentHue;
                 }
                 else
@@ -63,7 +68,6 @@ public class NightMode : MonoBehaviour
                 SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
                 if (spriteRenderer == null)
                 {
-                    Image image = obj.GetComponent<Image>();
                     image.color = changeInteractableHue;
                 }
                 else

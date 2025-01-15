@@ -12,6 +12,7 @@ TagManager:
   - Environment
   - Enemy
   - enemy
+  - inventorymain
   layers:
   - Default
   - TransparentFX

@@ -49,6 +49,8 @@ MonoBehaviour:
   dayHue: {r: 1, g: 1, b: 1, a: 1}
   isNight: 0
   gameObjects: []
-  cycle: 0
-  day: 0
-  night: 0
+  cycle: 330
+  enemyToSummon1: {fileID: 5383725930543997120, guid: c5934130b7b7ff84cbf9e0e6365fbb5d, type: 3}
+  noOfEnemies: 3
+  areaOfPotentialSpawn: 50
+  areaOfNoNoSquare: 10
