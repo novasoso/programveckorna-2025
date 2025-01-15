@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd95b2e596047804b9c7aaab9339829e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 1.5
 --- !u!114 &4311441934446282267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,8 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87e927ad3014d040ba7d9b01b7c5f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 2
+  speed: 5
   inChase: 0
 --- !u!58 &2148163240466638108
 CircleCollider2D:
