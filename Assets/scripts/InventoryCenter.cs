@@ -13,6 +13,7 @@ public class InventoryCenter : MonoBehaviour
     Rigidbody2D rb;
     public int invbuffer = 0;
     public float sigma = 0;
+    public float boy = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class InventoryCenter : MonoBehaviour
     void Update()
     {
         sigma = transform.localPosition.x;
+        boy = transform.localPosition.y;
         if (sigma <= 0 && inventoryWIP == 0 && invbuffer == 1) //detects if the cooldown is active, which version it is and if the object's x position is below a certain limit before stopping the object
         {
             Invoke("moveinventory", 0f);
