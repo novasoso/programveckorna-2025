@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5532637549483727274}
   - component: {fileID: 6361326503943695448}
   - component: {fileID: 1470156460953074412}
-  - component: {fileID: -3079235988087710500}
   - component: {fileID: 4124068244650333888}
   - component: {fileID: 3428358363299933797}
   - component: {fileID: 2812290990474072732}
@@ -195,20 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyInteractable: {fileID: 0}
   interacting: 0
---- !u!114 &-3079235988087710500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7216571458901680701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc109d6bd91cb19479eb629314a03949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDamage: 3
-  playerHealth: 30
 --- !u!114 &4124068244650333888
 MonoBehaviour:
   m_ObjectHideFlags: 0
