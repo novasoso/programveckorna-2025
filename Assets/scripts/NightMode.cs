@@ -21,11 +21,11 @@ public class NightMode : MonoBehaviour
     }
     void Update()
     {
-        cycle += Time.deltaTime;
+        cycle += Time.deltaTime; //Vide used MY code and ruined it with these TRASH names!!
         if (cycle >= 360)
         {
             cycle = 0;
-            if (isNight == false)
+            if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
                 summon();
                 nightMode();
@@ -34,12 +34,12 @@ public class NightMode : MonoBehaviour
             else if (isNight)
             {
                 dayMode();
-                isNight = false;
+                isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha buddy
             }
         }
     }
 
-    private void nightMode()
+    private void nightMode() //since we changing eachothers code now, why dont i mess with YOUR code for a change. Check NPC1DialogueText. You're done heh
     {
         gameObjects = new List<GameObject>(GameObject.FindObjectsOfType<GameObject>());
         isNight = true;

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,10 +12,11 @@ public class InventoryCenter : MonoBehaviour
     public int inventoryWIP;
     Rigidbody2D rb;
     public int invbuffer = 0;
+    public float sigma = 0;
+    public float boy = 0;
     // Start is called before the first frame update
     void Start()
     {
-        positionToReturnTo = transform.position;
         inventoryWIP = 0;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -22,21 +24,28 @@ public class InventoryCenter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && invbuffer == 0)
+        sigma = transform.localPosition.x;
+        boy = transform.localPosition.y;
+        if (sigma <= 0 && inventoryWIP == 0 && invbuffer == 1) //detects if the cooldown is active, which version it is and if the object's x position is below a certain limit before stopping the object
+        {
+            Invoke("moveinventory", 0f);
+        }else if (sigma >= 1700 && inventoryWIP == 1 && invbuffer == 1)
+        {
+            Invoke("moveinventory2", 0f);
+        }
+        if (Input.GetKeyDown(KeyCode.I) && invbuffer == 0) //detects if u pressed I and the cooldown isnt active
         {
             invbuffer = 1;
-            if (inventoryWIP == 1)
+            if (inventoryWIP == 1) //checks whether it should move to the center of your screen or to the side
             {
                 rb.velocity = new Vector2(1200, 0);
-                Invoke("moveinventory2", 0.55f);
             } else if (inventoryWIP == 0)
             {
                 rb.velocity = new Vector2(-1200, 0);
-                Invoke("moveinventory", 0.55f);
             }
         }
     }
-    void moveinventory2()
+    void moveinventory2() // different versions of the method that stops the object
     {
         rb.velocity = new Vector2(0, 0);
         transform.localPosition = new Vector3(1700, 0);
