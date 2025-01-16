@@ -5668,6 +5668,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 482255425}
     m_Modifications:
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingEast
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e8c48f3bda51ca4bbb0c6dd3154a3da, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingWest
+      value: 
+      objectReference: {fileID: 21300000, guid: c87d3ce11f075e5418d76505a69db657, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingNorth
+      value: 
+      objectReference: {fileID: 21300000, guid: d53f0ed7f3c8c874482576756b488269, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingSouth
+      value: 
+      objectReference: {fileID: 21300000, guid: 23cd579d84c0c9d4b9bc9212a7dc528f, type: 3}
     - target: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
       propertyPath: m_Name
       value: player
@@ -8510,7 +8526,7 @@ GameObject:
   - component: {fileID: 1773387070}
   m_Layer: 0
   m_Name: ForestBarrierTexture (76)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
