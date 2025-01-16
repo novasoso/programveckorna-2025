@@ -31,7 +31,7 @@ public class NPC1DialogueText : MonoBehaviour
             changeThis.sprite = myDialogueIcon;
             if (dialogueTrack == 0)
             {
-                tmp.StartRevealText("I'm the Builder NPC", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
+                tmp.StartRevealText("heh", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
             else if (dialogueTrack == 1)
             {

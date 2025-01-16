@@ -20,7 +20,6 @@ public class playerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        checkvelocity(moveY, moveX);
         Vector2 movement = new Vector2(moveX, moveY);
         transform.Translate(movement * moveSpeed * Time.deltaTime);
 
@@ -40,9 +39,5 @@ public class playerMovement : MonoBehaviour
         {
             currentSprite.sprite = facingNorth;
         }
-    }
-    void checkvelocity(float blumpkin, float piggy)
-    {
-        print(blumpkin + " "+ piggy);
     }
 }

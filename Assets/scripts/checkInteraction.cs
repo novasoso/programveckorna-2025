@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class checkInteraction : MonoBehaviour
@@ -5,6 +6,7 @@ public class checkInteraction : MonoBehaviour
     playerDetecter detecter;
     public GameObject nearbyInteractable;
     public bool interacting = false;
+    public int berrytime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,10 @@ public class checkInteraction : MonoBehaviour
         {
             if (nearbyInteractable.CompareTag("Interactable") && Input.GetKeyDown(KeyCode.E)) // if the nearby interactable is item and E is pressed
             {
-                print("item get");
+                if (nearbyInteractable = GameObject.Find("Berry"))
+                {
+                    berrytime = 1;
+                }
                 interacting = true; //player has interacted
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E)) // else, if the nearby interactable is NPC and E is pressed
