@@ -13,6 +13,8 @@ TagManager:
   - Enemy
   - enemy
   - inventorymain
+  - berry
+  - nightcontroller
   layers:
   - Default
   - TransparentFX
