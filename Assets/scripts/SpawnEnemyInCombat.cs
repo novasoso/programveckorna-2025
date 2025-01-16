@@ -12,7 +12,7 @@ public class SpawnEnemyInCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnLocation = new Vector3(0, 0, 0);
+        spawnLocation = new Vector3(1, 0, 0);
         GameObject clone = Instantiate(enemy, spawnLocation, Quaternion.identity);
         
         print(clone);

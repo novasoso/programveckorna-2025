@@ -1,12 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TemporaryGuy : MonoBehaviour
+public class PlayButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -14,11 +16,9 @@ public class TemporaryGuy : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    public void SendToGame()
     {
-        if (collision.gameObject.tag == "door")
-        {
-            SceneManager.LoadScene(0);
-        }
+        SceneManager.LoadScene("ElonsRoligaScen");
     }
 }

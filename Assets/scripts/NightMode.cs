@@ -17,7 +17,7 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dayMode();
     }
     void Update()
     {
@@ -27,8 +27,8 @@ public class NightMode : MonoBehaviour
             cycle = 0;
             if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
-                nightMode();
                 summon();
+                nightMode();
                 isNight = true;
             }
             else if (isNight)
@@ -45,12 +45,17 @@ public class NightMode : MonoBehaviour
         isNight = true;
         foreach (GameObject obj in gameObjects)
         {
-            if (obj.CompareTag("Environment"))
+            Image image = obj.GetComponent<Image>();
+            if (obj.name == "darkness" && image != null)
+            {
+                print("i found darkness buddy im making him kinda opaque");
+                image.color = new Color (0.068f, 0.081f, 0.137f, 0.98f);
+            }
+            else if (obj.CompareTag("Environment"))
             {
                 SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
                 if (spriteRenderer == null)
                 {
-                    Image image = obj.GetComponent<Image>();
                     image.color = changeEnvironmentHue;
                 }
                 else
@@ -63,7 +68,6 @@ public class NightMode : MonoBehaviour
                 SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
                 if (spriteRenderer == null)
                 {
-                    Image image = obj.GetComponent<Image>();
                     image.color = changeInteractableHue;
                 }
                 else
