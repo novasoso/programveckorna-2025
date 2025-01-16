@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -12,6 +13,8 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         currentSprite = GetComponent<SpriteRenderer>();
+        transform.position = new Vector2(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"));
+
     }
 
     // Update is called once per frame

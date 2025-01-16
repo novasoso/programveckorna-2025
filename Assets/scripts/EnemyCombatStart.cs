@@ -23,6 +23,8 @@ public class EnemyCombatStart : MonoBehaviour
        
         if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerPrefs.SetFloat("playerX", collision.gameObject.transform.position.x);
+            PlayerPrefs.SetFloat("playerY", collision.gameObject.transform.position.y);
             SceneManager.LoadScene(0);
             print("Enemy collides with player");
             Destroy(gameObject);

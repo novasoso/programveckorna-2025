@@ -19,6 +19,6 @@ public class PlayButton : MonoBehaviour
 
     public void SendToGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("ElonsRoligaScen");
     }
 }
