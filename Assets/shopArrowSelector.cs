@@ -113,6 +113,6 @@ public class shopArrowSelector : MonoBehaviour
     }
     void checkSelect()
     {
-
+    
     }
 }

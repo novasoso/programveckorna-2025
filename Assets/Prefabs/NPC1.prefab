@@ -202,7 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeIcon: {fileID: 0}
   myDialogueIcon: {fileID: 576553139, guid: 24cc197d562eadf4383e1874977698b1, type: 3}
-  revealTime: 0.3
+  dialogueTrack: 0
+  zibzab: 0
 --- !u!114 &6468790274410645100
 MonoBehaviour:
   m_ObjectHideFlags: 0
