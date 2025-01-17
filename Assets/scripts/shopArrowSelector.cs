@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shopArrowSelector : MonoBehaviour
 {
@@ -229,7 +230,7 @@ public class shopArrowSelector : MonoBehaviour
             }
             else if (atLeaveHover)
             {
-
+                SceneManager.LoadScene("Main");
             }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
