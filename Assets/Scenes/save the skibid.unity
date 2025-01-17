@@ -8711,35 +8711,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665262765}
   m_CullTransparentMesh: 1
---- !u!1 &1670389520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4787488293613427135, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-  m_PrefabInstance: {fileID: 2062717497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1670389521 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8319819100051133205, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
   m_PrefabInstance: {fileID: 2062717497}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1670389526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670389520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81122884531f2b74fa34e3bebdf234bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  berry: 0
-  skibiditoilet: 0
-  premierballs: 0
-  sigmaboy: 0
-  invy: 0
-  invx: 0
-  slots: 0
 --- !u!1001 &1683393792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10439,10 +10415,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8319819100051133205, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 237128101}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4787488293613427135, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670389526}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
 --- !u!1 &2094139648
 GameObject:
