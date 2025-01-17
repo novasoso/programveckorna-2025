@@ -27,7 +27,7 @@ public class talkController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localPosition == new Vector3(0, 116.1449f, 0))
+        if (father.transform.localPosition == new Vector3(-157.6f, 0, 0))
         {
             switch (index)
             {
