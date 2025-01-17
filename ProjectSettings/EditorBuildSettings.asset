@@ -24,18 +24,21 @@ EditorBuildSettings:
     path: Assets/Scenes/CombatScene.unity
     guid: 995d78d7a565f0446983b790b2505ba4
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: bb707bac106788345a08a9c27e21e20b
+  - enabled: 1
     path: Assets/Scenes/CombatScene.unity
     guid: 995d78d7a565f0446983b790b2505ba4
   - enabled: 0
     path: Assets/Scenes/Videsscen.unity
     guid: 5e2d7174cce82664a8d0c19647358625
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ElonsRoligaScen.unity
     guid: 7559718aae4f35b4fa4cdf288ad083f6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/mursuShop.unity
     guid: 26eb57868f7c66445a690ced823adcbd
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: bb707bac106788345a08a9c27e21e20b
+    path: Assets/Scenes/Main.unity
+    guid: 6791d8a12d1503a48b6b5fab9f094eec
   m_configObjects: {}
