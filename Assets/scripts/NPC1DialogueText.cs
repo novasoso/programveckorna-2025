@@ -31,19 +31,19 @@ public class NPC1DialogueText : MonoBehaviour
             changeThis.sprite = myDialogueIcon;
             if (dialogueTrack == 0)
             {
-                tmp.StartRevealText("heh", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
+                tmp.StartRevealText("G'day friend! The name's Greg.", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
             else if (dialogueTrack == 1)
             {
-                tmp.StartRevealText("it will turn night in about 30 seconds, scary monsters will come from the shadows to eat you", zibzab);
+                tmp.StartRevealText("I've lost all me planks and tools. They're scattered around this area.", zibzab);
             }
             else if (dialogueTrack == 2)
             {
-                tmp.StartRevealText("i like building things :)", zibzab);
+                tmp.StartRevealText("If ya can find them for me, and toss in a few bucks, I could build a real nice house for ya.", zibzab);
             }
             else if (dialogueTrack == 3)
             {
-                tmp.StartRevealText("you can pick up items sometimes", zibzab);
+                tmp.StartRevealText("Good luck, mate.", zibzab);
             }
             else if (dialogueTrack == 4)
             {

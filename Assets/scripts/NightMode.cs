@@ -27,14 +27,14 @@ public class NightMode : MonoBehaviour
             cycle = 0;
             if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
-                isNight = true;
                 summon();
                 nightMode();
+                isNight = true;
             }
             else if (isNight)
             {
-                isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha buddy
                 dayMode();
+                isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
             }
         }
     }
