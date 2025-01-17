@@ -6714,7 +6714,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
-<<<<<<< HEAD
 --- !u!1 &1296127492
 GameObject:
   m_ObjectHideFlags: 0
@@ -6800,8 +6799,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1878, y: -4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> 539712be68ed8b16f905b3396cc3d15cfdbf0864
 --- !u!1 &1319915679
 GameObject:
   m_ObjectHideFlags: 0
