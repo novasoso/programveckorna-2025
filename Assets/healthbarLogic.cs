@@ -28,8 +28,13 @@ public class healthbarLogic : MonoBehaviour
         {
             if (sig != health.playerHealth)
             {
+                healthbarText text;
                 float smeg = sig - health.playerHealth;
                 slide.value -= smeg / playerMaxHealth;
+                float f = slide.value;
+                text = GetComponentInChildren<healthbarText>();
+                f = Mathf.Round(f * 10.0f) * 0.1f;
+                text.smeg(f);
             }
             sig = health.playerHealth;
         }
