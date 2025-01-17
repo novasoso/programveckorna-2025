@@ -1486,6 +1486,7 @@ GameObject:
   - component: {fileID: 315731598}
   - component: {fileID: 315731601}
   - component: {fileID: 315731600}
+  - component: {fileID: 315731602}
   m_Layer: 0
   m_Name: WoodLodgeTavernOutlined
   m_TagString: Environment
@@ -1632,6 +1633,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &315731602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315731597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02604278b742d6a45a5ef754a22f9459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.1
 --- !u!1 &317413944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,6 +6714,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+<<<<<<< HEAD
 --- !u!1 &1296127492
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +6800,8 @@ RectTransform:
   m_AnchoredPosition: {x: -1878, y: -4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> 539712be68ed8b16f905b3396cc3d15cfdbf0864
 --- !u!1 &1319915679
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,11 +8079,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
---- !u!224 &1637996439 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 788690429319345143, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-  m_PrefabInstance: {fileID: 3804635555894637429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695233646
 GameObject:
   m_ObjectHideFlags: 0
@@ -10837,24 +10849,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2680654811114912464, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8319819100051133205, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3193685983134779635, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-    - {fileID: 6013070215979233080, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-    - {fileID: 1958032476374013447, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-    - {fileID: 2980191100820434630, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 788690429319345143, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1296127496}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
 --- !u!1 &3804635555894637430 stripped
