@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mursuShop.unity
     guid: 26eb57868f7c66445a690ced823adcbd
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 6791d8a12d1503a48b6b5fab9f094eec
   m_configObjects: {}
