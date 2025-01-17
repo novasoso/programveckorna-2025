@@ -6106,6 +6106,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 482255425}
     m_Modifications:
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingEast
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e8c48f3bda51ca4bbb0c6dd3154a3da, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingWest
+      value: 
+      objectReference: {fileID: 21300000, guid: c87d3ce11f075e5418d76505a69db657, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingNorth
+      value: 
+      objectReference: {fileID: 21300000, guid: d53f0ed7f3c8c874482576756b488269, type: 3}
+    - target: {fileID: 1665779037259837600, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
+      propertyPath: facingSouth
+      value: 
+      objectReference: {fileID: 21300000, guid: 23cd579d84c0c9d4b9bc9212a7dc528f, type: 3}
     - target: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
       propertyPath: m_Name
       value: player
@@ -8711,35 +8727,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665262765}
   m_CullTransparentMesh: 1
---- !u!1 &1670389520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4787488293613427135, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-  m_PrefabInstance: {fileID: 2062717497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1670389521 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8319819100051133205, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
   m_PrefabInstance: {fileID: 2062717497}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1670389526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670389520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81122884531f2b74fa34e3bebdf234bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  berry: 0
-  skibiditoilet: 0
-  premierballs: 0
-  sigmaboy: 0
-  invy: 0
-  invx: 0
-  slots: 0
 --- !u!1001 &1683393792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10425,7 +10417,11 @@ PrefabInstance:
       value: inventorymain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2980191100820434630, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
+    - {fileID: 6013070215979233080, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
+    - {fileID: 3193685983134779635, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
+    - {fileID: 1958032476374013447, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 788690429319345143, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       insertIndex: -1
@@ -10439,10 +10435,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8319819100051133205, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 237128101}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4787488293613427135, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670389526}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
 --- !u!1 &2094139648
 GameObject:
