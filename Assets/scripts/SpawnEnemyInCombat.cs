@@ -5,14 +5,13 @@ using UnityEngine;
 public class SpawnEnemyInCombat : MonoBehaviour
 {
     public GameObject enemy;
-    Vector3 spawnLocation;
+    public Vector3 spawnLocation;
     EnemyStats stats;
     public AttackEnemy attacker;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnLocation = new Vector3(4f, 2f, 0);
         GameObject clone = Instantiate(enemy, spawnLocation, Quaternion.identity);
         
         print(clone);

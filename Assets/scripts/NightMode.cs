@@ -14,6 +14,7 @@ public class NightMode : MonoBehaviour
     public int noOfEnemies;
     public float areaOfPotentialSpawn;
     public int areaOfNoNoSquare;
+    public int otherIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +28,9 @@ public class NightMode : MonoBehaviour
             cycle = 0;
             if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
+                isNight = true;
                 summon();
                 nightMode();
-                isNight = true;
             }
             else if (isNight)
             {
@@ -118,7 +119,7 @@ public class NightMode : MonoBehaviour
 
         if (enemyToSummon1 != null && isNight)
         {
-            while (index < 3)
+            while (index < noOfEnemies)
             {
                 Vector2 spawnHere = new Vector2(
                     Random.Range(player.transform.position.x - areaOfPotentialSpawn, player.transform.position.x + areaOfPotentialSpawn),
