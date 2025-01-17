@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class EnemyStats : MonoBehaviour
         if(EnemyHealth <= 0)
         {
             EnemyHealth = originalEnemyHealth;
+            SceneManager.LoadScene("ElonsRoligaScen");
             Destroy(gameObject);
         }
     }
