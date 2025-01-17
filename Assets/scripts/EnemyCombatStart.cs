@@ -25,7 +25,7 @@ public class EnemyCombatStart : MonoBehaviour
         {
             PlayerPrefs.SetFloat("playerX", collision.gameObject.transform.position.x);
             PlayerPrefs.SetFloat("playerY", collision.gameObject.transform.position.y);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("CombatScene");
             print("Enemy collides with player");
             Destroy(gameObject);
         }
