@@ -14,7 +14,7 @@ public class playerMovement : MonoBehaviour
     {
         currentSprite = GetComponent<SpriteRenderer>();
         transform.position = new Vector2(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"));
-
+        Invoke("xycorrection", 0.2f);
     }
 
     // Update is called once per frame
@@ -42,5 +42,10 @@ public class playerMovement : MonoBehaviour
         {
             currentSprite.sprite = facingNorth;
         }
+    }
+   void xycorrection()
+    {
+        //bud u think ur the sigma?
+        transform.position = new Vector3(3.42f, -4.2f);
     }
 }
