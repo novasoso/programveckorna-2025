@@ -23,7 +23,7 @@ public class EnemyStats : MonoBehaviour
         if(EnemyHealth <= 0)
         {
             EnemyHealth = originalEnemyHealth;
-            SceneManager.LoadScene("ElonsRoligaScen");
+            SceneManager.LoadScene("Main");
             Destroy(gameObject);
         }
     }
