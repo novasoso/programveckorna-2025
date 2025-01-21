@@ -13,8 +13,10 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         currentSprite = GetComponent<SpriteRenderer>();
+        
         transform.position = new Vector2(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"));
-        Invoke("xycorrection", 0.2f);
+        
+        //Invoke("xycorrection", 0.2f);
     }
 
     // Update is called once per frame
@@ -42,6 +44,9 @@ public class playerMovement : MonoBehaviour
         {
             currentSprite.sprite = facingNorth;
         }
+
+        PlayerPrefs.SetFloat("playerX", transform.position.x);
+        PlayerPrefs.SetFloat("playerY", transform.position.y);
     }
    void xycorrection()
     {
