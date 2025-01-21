@@ -25,8 +25,8 @@ public class shopArrowSelector : MonoBehaviour
     public GameObject leaveSelect;
     GameObject emptyBox;
 
-    bool inSubMenu = false;
-    bool inShop = false;
+    public bool inSubMenu = false;
+    public bool inShop = false;
 
     bool berryHover = false;
     bool candyHover = false;
@@ -67,66 +67,77 @@ public class shopArrowSelector : MonoBehaviour
     void Update()
     {
         redoSelect();
-        checkSelect();
-    }
-    void redoSelect()
-    {
-        if(checkUpInput() && inSubMenu != true)
+        if (inShop)
         {
-            if (inSubMenu)
+            skibidi();
+        }
+        else
+        {
+            checkSelect();
+        }
+    }
+    void skibidi()
+    {
+        if (inSubMenu)
+        {
+            if (inShop)
             {
-                if (inShop)
+                print(shopMursu);
+                berryHover = true;
+                if (checkUpInput())
                 {
-                    berryHover = true;
-                    if (checkUpInput())
+                    if (berryHover)
                     {
-                        if (berryHover)
-                        {
-                            goToTie(ref berryHover, ref tieHover);
-                        }
-                        else if (candyHover)
-                        {
-                            goToBerry(ref candyHover, ref berryHover);
-                        }
-                        else if (crossantHover)
-                        {
-                            goToCandy(ref crossantHover, ref candyHover);
-                        }
-                        else if (bloomHover)
-                        {
-                            goToCrossant(ref bloomHover, ref crossantHover);
-                        }
-                        else if (tieHover)
-                        {
-                            goToBloom(ref tieHover, ref bloomHover);
-                        }
+                        goToTie(ref berryHover, ref tieHover);
                     }
-                    else if (checkDownInput())
+                    else if (candyHover)
                     {
-                        if (berryHover)
-                        {
-                            goToCandy(ref berryHover, ref candyHover);
-                        }
-                        else if (candyHover)
-                        {
-                            goToCrossant(ref candyHover, ref crossantHover);
-                        }
-                        else if (crossantHover)
-                        {
-                            goToBloom(ref crossantHover, ref bloomHover);
-                        }
-                        else if (bloomHover)
-                        {
-                            goToTie(ref bloomHover, ref tieHover);
-                        }
-                        else if (tieHover)
-                        {
-                            goToBerry(ref tieHover, ref berryHover);
-                        }
+                        goToBerry(ref candyHover, ref berryHover);
+                    }
+                    else if (crossantHover)
+                    {
+                        goToCandy(ref crossantHover, ref candyHover);
+                    }
+                    else if (bloomHover)
+                    {
+                        goToCrossant(ref bloomHover, ref crossantHover);
+                    }
+                    else if (tieHover)
+                    {
+                        goToBloom(ref tieHover, ref bloomHover);
+                    }
+                }
+                else if (checkDownInput())
+                {
+                    if (berryHover)
+                    {
+                        goToCandy(ref berryHover, ref candyHover);
+                    }
+                    else if (candyHover)
+                    {
+                        goToCrossant(ref candyHover, ref crossantHover);
+                    }
+                    else if (crossantHover)
+                    {
+                        goToBloom(ref crossantHover, ref bloomHover);
+                    }
+                    else if (bloomHover)
+                    {
+                        goToTie(ref bloomHover, ref tieHover);
+                    }
+                    else if (tieHover)
+                    {
+                        goToBerry(ref tieHover, ref berryHover);
                     }
                 }
             }
-            else if (atShopHover)
+        }
+    }
+    void redoSelect()
+    {
+        if(checkUpInput())
+        {
+            if (atShopHover)
             {
                 goToLeave();
                 atShopHover = false;
@@ -269,7 +280,7 @@ public class shopArrowSelector : MonoBehaviour
     void resetGivenBox(GameObject box, Vector3 returnTo)
     {
         box.transform.localPosition = returnTo;
-        if (box.name == "shopTab")
+        if (box == shopBox)
         {
             inSubMenu = false;
             inShop = false;
@@ -289,7 +300,7 @@ public class shopArrowSelector : MonoBehaviour
     void makeBoxActive(GameObject box, Vector3 activePos)
     {
         box.transform.localPosition = activePos;
-        if (box.name == "shopTab")
+        if (box == shopBox)
         {
             inSubMenu = true;
             inShop = true;

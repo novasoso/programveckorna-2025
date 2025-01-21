@@ -2560,6 +2560,8 @@ MonoBehaviour:
   talkSelect: {fileID: 1878992805}
   mursuSelect: {fileID: 888188700}
   leaveSelect: {fileID: 22282484}
+  inSubMenu: 0
+  inShop: 0
   boxMoveSpeed: 300
 --- !u!114 &1742675592
 MonoBehaviour:
@@ -3180,6 +3182,7 @@ GameObject:
   - component: {fileID: 2061372025}
   - component: {fileID: 2061372027}
   - component: {fileID: 2061372026}
+  - component: {fileID: 2061372028}
   m_Layer: 5
   m_Name: shopMursu
   m_TagString: Untagged
@@ -3244,6 +3247,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061372024}
   m_CullTransparentMesh: 1
+--- !u!114 &2061372028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061372024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98acc50a252fdd94db8dc62b4f612418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
