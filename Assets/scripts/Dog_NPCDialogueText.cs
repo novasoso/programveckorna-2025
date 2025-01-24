@@ -61,6 +61,14 @@ public class Dog_NPCDialogueText : MonoBehaviour
             {
                 tmp.StartRevealText("woof bark bark woof woof bark bark bark barf woof woof bark", zibzab);
             }
+            else if (dialogueTrack == 8)
+            {
+                tmp.StartRevealText("No one will believe you.", zibzab);
+            }
+            else if (dialogueTrack == 9)
+            {
+                tmp.StartRevealText("woof wof bark bark woof", zibzab);
+            }
             dialogueTrack++;
             interactScript.interacting = false;
 
