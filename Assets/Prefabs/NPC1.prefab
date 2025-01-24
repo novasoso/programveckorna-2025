@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1395698192474833566}
   - component: {fileID: 6468790274410645100}
   - component: {fileID: 2821104960813168779}
+  - component: {fileID: 2811958559477611173}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -204,6 +205,7 @@ MonoBehaviour:
   myDialogueIcon: {fileID: 576553139, guid: 24cc197d562eadf4383e1874977698b1, type: 3}
   dialogueTrack: 0
   zibzab: 0
+  startedQuest: 0
 --- !u!114 &6468790274410645100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 0}
+  moveBox: 0
 --- !u!61 &2821104960813168779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,3 +265,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &2811958559477611173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609753321486422588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066159f20eb794c4c908677822d36ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
