@@ -14,6 +14,7 @@ public class NPC1DialogueText : MonoBehaviour
     public Sprite myDialogueIcon;
     public int dialogueTrack = 0;
     public float zibzab;
+    public bool startedQuest = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class NPC1DialogueText : MonoBehaviour
             else if (dialogueTrack == 3)
             {
                 tmp.StartRevealText("Good luck, mate.", zibzab);
+                startedQuest = true;
             }
            
             dialogueTrack++;
