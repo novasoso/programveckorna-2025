@@ -14,6 +14,7 @@ public class NPC1DialogueText : MonoBehaviour
     public Sprite myDialogueIcon;
     public int dialogueTrack = 0;
     public float zibzab;
+    public bool startedQuest = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,30 +45,9 @@ public class NPC1DialogueText : MonoBehaviour
             else if (dialogueTrack == 3)
             {
                 tmp.StartRevealText("Good luck, mate.", zibzab);
+                startedQuest = true;
             }
-            else if (dialogueTrack == 4)
-            {
-                tmp.StartRevealText("Open inventory with I", zibzab);
-            }else if (dialogueTrack == 5)
-            {
-                tmp.StartRevealText("I am in possesion of a dual set of mobile devices", zibzab);
-            }
-            else if (dialogueTrack == 6)
-            {
-                tmp.StartRevealText("Wherein one is exclusively allocated to the procurement of contraband substances", zibzab);
-            }
-            else if (dialogueTrack == 7)
-            {
-                tmp.StartRevealText("while the other is dedicated to the meticulous management of pecuniary transactions", zibzab);
-            }
-            else if (dialogueTrack == 8)
-            {
-                tmp.StartRevealText("moreover I possess an additional pair of mobile devices one specifically designated for engaging in communication with the female gender", zibzab);
-            }
-            else if (dialogueTrack == 9)
-            {
-                tmp.StartRevealText("while the other remains steadfastly committed to the aforementioned financial transactions", zibzab);
-            }
+           
             dialogueTrack++;
             interactScript.interacting = false;
 
