@@ -8747,7 +8747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: cycle
-      value: 330
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: noOfEnemies
@@ -14144,7 +14144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678954927845308303, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -225
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3093792435587231714, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       propertyPath: m_fontSize
