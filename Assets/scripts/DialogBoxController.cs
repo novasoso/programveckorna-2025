@@ -14,20 +14,20 @@ public class DialogBoxController : MonoBehaviour
     void Start()
     {
         box.transform.position = new(box.transform.position.x, -225, box.transform.position.z);
+        boxInView = false;
         detector = GetComponent<playerDetecter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("hello!!11");
-        if (detector.PlayerDetected == true && Input.GetKeyDown(KeyCode.E))
+        if (detector.PlayerDetected == true && Input.GetKeyDown(KeyCode.E) && boxInView==false)
         {
             print("moved the bawcks");
             boxInView = true;
             box.transform.position = new(box.transform.position.x, 160, box.transform.position.z);
         }
-        else if (detector.PlayerDetected == false && boxInView == false)
+        else if (detector.PlayerDetected == false && boxInView == true)
         {
             print("cant fidn u buddy");
             boxInView = false;
