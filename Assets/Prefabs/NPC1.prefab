@@ -278,4 +278,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   builderHammer: {fileID: 7518842111687935570, guid: 48a969e2311357948aaa15cb4e9c93f0, type: 3}
-  hammerSpawn: {x: 16, y: -6, z: 0}
+  hammerSpawn: {x: -30, y: -5, z: -4}

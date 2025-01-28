@@ -11,7 +11,7 @@ public class BuilderQuest : MonoBehaviour
     bool hasHammerSpawned = false;
     void Start()
     {
-        
+        builderDialogue = GetComponent<NPC1DialogueText>();
     }
 
     // Update is called once per frame
@@ -24,5 +24,6 @@ public class BuilderQuest : MonoBehaviour
             print("Hammer has spawned at " + hammerSpawn);
 
         }
+
     }
 }
