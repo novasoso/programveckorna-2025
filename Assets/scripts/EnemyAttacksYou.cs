@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyAttacksYou : MonoBehaviour
@@ -11,10 +12,12 @@ public class EnemyAttacksYou : MonoBehaviour
     PlayerStats playerHealth;
     public EnemyStats foundEnemyDamage;
     public GameObject FindPlayerHealth;
+    TextMeshProUGUI tmpugui;
 
     // Start is called before the first frame update
     void Start()
     {
+        tmpugui = GameObject.FindGameObjectWithTag("combatLog").GetComponent<TextMeshProUGUI>();
         accessTurns = turns.GetComponent<PlayerAndEnemyTurns>();
         playerHealth = FindAnyObjectByType<PlayerStats>();
         isBlocking = blockingFunction.GetComponent<BlockEnemyAttack>();
@@ -32,14 +35,13 @@ public class EnemyAttacksYou : MonoBehaviour
         if (accessTurns.playersTurn == false && isBlocking.isBlocking == true)
         { 
             accessTurns.playersTurn = true;
-            print("Enemy tried to attack but the player blocked");
+            tmpugui.text = "Enemy tried to attack, but Traveler blocked";
         }
     }
 
     void enemyAttack()
     {
         playerHealth.playerHealth -= foundEnemyDamage.EnemyDamage;
-
-        print("Enemy dealt " + foundEnemyDamage.EnemyDamage + " and player now has " + playerHealth.playerHealth);
+        tmpugui.text = "Enemy dealt " + foundEnemyDamage.EnemyDamage;
     }
 }

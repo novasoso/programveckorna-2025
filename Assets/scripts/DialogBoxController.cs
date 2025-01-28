@@ -23,13 +23,11 @@ public class DialogBoxController : MonoBehaviour
     {
         if (detector.PlayerDetected == true && Input.GetKeyDown(KeyCode.E) && boxInView==false)
         {
-            print("moved the bawcks");
             boxInView = true;
             box.transform.position = new(box.transform.position.x, 160, box.transform.position.z);
         }
         else if (detector.PlayerDetected == false && boxInView == true)
         {
-            print("cant fidn u buddy");
             boxInView = false;
             box.transform.position = new Vector3(box.transform.position.x, -225, box.transform.position.z);
         }
