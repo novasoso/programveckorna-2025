@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1395698192474833566}
   - component: {fileID: 6468790274410645100}
   - component: {fileID: 2821104960813168779}
+  - component: {fileID: -3889519467455950650}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: NPC
@@ -264,3 +265,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &-3889519467455950650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609753321486422588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec8a1e6515ec684c9968a24467008cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  builderHammer: {fileID: 7518842111687935570, guid: 48a969e2311357948aaa15cb4e9c93f0, type: 3}
+  hammerSpawn: {x: 16, y: -6, z: 0}
