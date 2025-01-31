@@ -85,17 +85,14 @@ public class NightMode : MonoBehaviour
         isNight = false;
         foreach (GameObject obj in gameObjects)
         {
-            print(obj);
             Image image = obj.GetComponent<Image>();
             SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
             if (spriteRenderer == null && image != null && obj.name != "darkness")
             {
-                print(image.color);
                 image.color = dayHue;
             }
             else if (obj.name == "darkness" && image != null)
             {
-                print ("found darkness, its color right now is = "+image.color);
                 image.color = new(image.color.r, image.color.b, image.color.g, 0f);
             }
             else if (spriteRenderer == null && image == null)
@@ -105,14 +102,11 @@ public class NightMode : MonoBehaviour
             else
             {
                 spriteRenderer.color = dayHue;
-                print(spriteRenderer.color);
             }
         }
     }
     private void summon()
     {
-        print("summon");
-        print(isNight);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector4 playersNoNoSquare = areaOfNuhUh(player.transform.position);
         int index = 0;
@@ -131,13 +125,12 @@ public class NightMode : MonoBehaviour
                     spawnHere.x > playersNoNoSquare.x && spawnHere.y < playersNoNoSquare.w ||
                     spawnHere.x < playersNoNoSquare.y && spawnHere.y < playersNoNoSquare.w)
                 {
-                    print("yep i can spawn there at "+spawnHere);
                     GameObject clone = Instantiate(enemyToSummon1, new Vector3(spawnHere.x, spawnHere.y, 0), Quaternion.identity);
                     index++;
                 }
                 else
                 {
-                    print(" i cant spawn at " + spawnHere);
+
                 }
             }
         }

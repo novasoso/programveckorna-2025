@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class AttackEnemy : MonoBehaviour
@@ -7,8 +8,10 @@ public class AttackEnemy : MonoBehaviour
     PlayerStats playerDamage;
     public EnemyStats foundEnemyHealth;
     public GameObject FindPlayerStats;
+    TextMeshProUGUI tmpugui;
     private void Start()
     {
+        tmpugui = GameObject.FindGameObjectWithTag("combatLog").GetComponent<TextMeshProUGUI>();
         accessTurns = turns.GetComponent<PlayerAndEnemyTurns>();
         playerDamage = FindPlayerStats.GetComponent<PlayerStats>();
         
@@ -20,8 +23,7 @@ public class AttackEnemy : MonoBehaviour
         {
             foundEnemyHealth.EnemyHealth -= playerDamage.playerDamage;
             accessTurns.playersTurn = false;
-
-            print("Player dealt " + playerDamage.playerDamage + " and the enemy now has " + foundEnemyHealth.EnemyHealth);
+            tmpugui.text = "Player dealt " + playerDamage.playerDamage + " and the enemy now has " + foundEnemyHealth.EnemyHealth;
         }
        
     }

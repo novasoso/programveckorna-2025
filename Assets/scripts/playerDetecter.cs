@@ -6,12 +6,11 @@ public class playerDetecter : MonoBehaviour
     {
         if (CollisionIsPlayer(collision))
         {
-            print("changed playerdetected bool to " + PlayerDetected);
             PlayerDetected = true;
         }
         else
         {
-            print("playerdetected bool is " + PlayerDetected);
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -19,12 +18,11 @@ public class playerDetecter : MonoBehaviour
 
         if (CollisionIsPlayer(collision))
         {
-            print("changed playerdetected bool to " + PlayerDetected);
             PlayerDetected = false;
         }
         else
         {
-            print("playerdetected bool is " + PlayerDetected);
+
         }
     }
 

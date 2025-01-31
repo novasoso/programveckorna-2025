@@ -15,6 +15,7 @@ TagManager:
   - inventorymain
   - berry
   - nightcontroller
+  - combatLog
   layers:
   - Default
   - TransparentFX
