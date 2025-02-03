@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,13 +5,17 @@ public class healthbarLogic : MonoBehaviour
 {
     PlayerStats health;
     PlayerAndEnemyTurns turnStuff;
+    healthbarText text;
+
     Slider slide;
-    int index = 1;
-    float sig;
+
+    float sig = 0;
     float playerMaxHealth;
+
     // Start is called before the first frame update
     void Start()
     {
+        text = GetComponentInChildren<healthbarText>();
         health = GameObject.FindAnyObjectByType<PlayerStats>();
         turnStuff = GameObject.FindAnyObjectByType<PlayerAndEnemyTurns>();
         slide = GetComponent<Slider>();
@@ -21,33 +23,41 @@ public class healthbarLogic : MonoBehaviour
         playerMaxHealth = health.playerHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Check if it's the player's turn
         if (buddyTurn())
         {
+            // Check if the player's health has changed
             if (sig != health.playerHealth)
             {
-                healthbarText text;
                 float smeg = sig - health.playerHealth;
                 slide.value -= smeg / playerMaxHealth;
-                float f = slide.value;
-                text = GetComponentInChildren<healthbarText>();
-                f = Mathf.Round(f * 10.0f) * 0.1f;
-                text.smeg(f);
+                string healthText = Ligma(smeg, text);
+                UpdateHealthText(healthText); // Update the health text display
             }
+            // Store the current health for the next update
             sig = health.playerHealth;
         }
     }
+
     bool buddyTurn()
     {
-        if (turnStuff.playersTurn)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        // Return true if it's the player's turn
+        return turnStuff.playersTurn;
+    }
+
+    string Ligma(float s, healthbarText text)
+    {
+        float f = slide.value * 100; // Convert to percentage
+        f = Mathf.Round(f); // Round to the nearest whole number
+        string bomb = f.ToString() + "%";
+        return bomb;
+    }
+
+    void UpdateHealthText(string healthText)
+    {
+        // Assuming healthbarText has a method to update the displayed text
+        text.tmpugui.text = (healthText);
     }
 }

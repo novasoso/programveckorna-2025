@@ -908,10 +908,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3267523761889603885, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ae9810928b953e245b902b844b768ab4, type: 2}
     - target: {fileID: 7216571458901680701, guid: 17e7d99d9da911343adf7a7cadb8a29d, type: 3}
       propertyPath: m_Name
       value: player
@@ -1181,25 +1177,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
-      propertyPath: cycle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
-      propertyPath: noOfEnemies
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: enemyToSummon1
       value: 
       objectReference: {fileID: 2014327763}
-    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
-      propertyPath: areaOfNoNoSquare
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
-      propertyPath: areaOfPotentialSpawn
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 7433722437875018175, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: m_Name
       value: NightControler
@@ -2167,10 +2147,6 @@ PrefabInstance:
     - target: {fileID: 1967761281541583390, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2680654811114912464, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
-      propertyPath: m_Color.a
-      value: 0.98039216
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

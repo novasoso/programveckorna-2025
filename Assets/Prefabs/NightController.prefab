@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127820045521951028}
   - component: {fileID: 5807987330617110473}
+  - component: {fileID: 3007555016480097775}
   m_Layer: 0
   m_Name: NightController
   m_TagString: Untagged
@@ -49,8 +50,21 @@ MonoBehaviour:
   dayHue: {r: 1, g: 1, b: 1, a: 1}
   isNight: 0
   gameObjects: []
-  cycle: 350
-  enemyToSummon1: {fileID: 5383725930543997120, guid: c5934130b7b7ff84cbf9e0e6365fbb5d, type: 3}
+  cycle: 0
+  enemyToSummon1: {fileID: 0}
   noOfEnemies: 3
-  areaOfPotentialSpawn: 50
+  areaOfPotentialSpawn: 40
   areaOfNoNoSquare: 10
+  otherIndex: 0
+--- !u!114 &3007555016480097775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7433722437875018175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8e50dca59836345b901f16ef8c806d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

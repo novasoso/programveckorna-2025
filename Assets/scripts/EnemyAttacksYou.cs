@@ -42,6 +42,6 @@ public class EnemyAttacksYou : MonoBehaviour
     void enemyAttack()
     {
         playerHealth.playerHealth -= foundEnemyDamage.EnemyDamage;
-        tmpugui.text = "Enemy dealt " + foundEnemyDamage.EnemyDamage;
+        tmpugui.text = "Enemy dealt " + foundEnemyDamage.EnemyDamage+" damage to the player.";
     }
 }
