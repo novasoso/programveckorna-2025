@@ -7,6 +7,7 @@ public class checkInteraction : MonoBehaviour
     public GameObject nearbyInteractable;
     public bool interacting = false;
     public int berrytime = 0;
+    public bool pickedUpHammer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,11 @@ public class checkInteraction : MonoBehaviour
                     berrytime = 1;
                 }
                 interacting = true; //player has interacted
+                if (nearbyInteractable = GameObject.Find("Hammer(Clone)"))
+                {
+                    pickedUpHammer = true;
+
+                }
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E)) // else, if the nearby interactable is NPC and E is pressed
             {
