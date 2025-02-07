@@ -35,7 +35,7 @@ public class NightMode : MonoBehaviour
                 isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
             }*/
         cycle += Time.deltaTime; //Vide used MY code and ruined it with these TRASH names!!
-        if (cycle >= 360)
+        if (cycle >= 90)
         {
             cycle = 0;
             if (isNight == false) //IsNiGhT, don't make me mad >:[
