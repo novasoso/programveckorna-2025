@@ -5,7 +5,7 @@ using UnityEngine;
 public class premierballs : MonoBehaviour
 {
     berry inv;
-    int sigmaboy = 0;
+    public int sigmaboy = 0;
     inventorymain hurhur;
     checkInteraction checker;
     // Start is called before the first frame update
