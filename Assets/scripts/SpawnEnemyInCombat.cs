@@ -1,9 +1,10 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEnemyInCombat : MonoBehaviour
 {
+    public GameObject clone;
     public GameObject enemy;
     public Vector3 spawnLocation;
     EnemyStats stats;
@@ -12,7 +13,7 @@ public class SpawnEnemyInCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject clone = Instantiate(enemy, spawnLocation, Quaternion.identity);
+        clone = Instantiate(enemy, spawnLocation, Quaternion.identity);
         
         print(clone);
         stats = clone.GetComponent<EnemyStats>();
