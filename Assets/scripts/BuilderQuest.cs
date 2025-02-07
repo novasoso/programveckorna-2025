@@ -18,7 +18,7 @@ public class BuilderQuest : MonoBehaviour
     bool hasPlanksSpawned = false;
     void Start()
     {
-        builderDialogue = GetComponent<NPC1DialogueText>();
+        
         
         
     }
