@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BuilderQuest : MonoBehaviour
 {
+    
+   
     private NPC1DialogueText builderDialogue;
     public GameObject builderHammer;
     public Vector3 hammerSpawn = new(16, -6, 0);
@@ -12,6 +14,7 @@ public class BuilderQuest : MonoBehaviour
     void Start()
     {
         builderDialogue = GetComponent<NPC1DialogueText>();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class BuilderQuest : MonoBehaviour
             print("Hammer has spawned at " + hammerSpawn);
 
         }
+       
 
     }
 }

@@ -6,6 +6,8 @@ public class NPC1DialogueText : MonoBehaviour
 {
     GameObject box;
 
+    checkInteraction hammertime;
+
     private checkInteraction interactScript;
     private playerDetecter detector;
     public GameObject changeIcon;
@@ -18,7 +20,8 @@ public class NPC1DialogueText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hammertime = GameObject.FindGameObjectWithTag("Player").GetComponent<checkInteraction>();
+
         detector = GetComponent<playerDetecter>(); //assign MY playerDetecter script
         interactScript = GameObject.FindGameObjectWithTag("Player").GetComponent<checkInteraction>(); // find and assign Player's checkInteraction script
         changeThis = changeIcon.GetComponent<Image>();
@@ -30,7 +33,11 @@ public class NPC1DialogueText : MonoBehaviour
         while (detector.PlayerDetected == true && interactScript.interacting == true)
         {
             changeThis.sprite = myDialogueIcon;
-            if (dialogueTrack == 0)
+            if (hammertime.pickedUpHammer == true)
+            {
+                tmp.StartRevealText("Thank you my friend. I've looked everywhere for my precious hammer, where did ya even find it?", zibzab);
+            }
+            else if (dialogueTrack == 0)
             {
                 tmp.StartRevealText("G'day friend! The name's Greg.", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
@@ -47,6 +54,7 @@ public class NPC1DialogueText : MonoBehaviour
                 tmp.StartRevealText("Good luck, mate.", zibzab);
                 startedQuest = true;
             }
+           
            
             dialogueTrack++;
             interactScript.interacting = false;
