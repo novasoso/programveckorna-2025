@@ -8,7 +8,6 @@ public class checkInteraction : MonoBehaviour
     public bool interacting = false;
     public int berrytime = 0;
     public bool pickedUpHammer = false;
-    premierballs berrychecks;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +17,13 @@ public class checkInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        berrychecks = GameObject.FindGameObjectWithTag("berrychecker").GetComponent<premierballs>();
         if (nearbyInteractable != null && detecter.PlayerDetected == true) //if nearby npc/item is found AND the nearby NPC is detecting the player
         {
             if (nearbyInteractable.CompareTag("Interactable") && Input.GetKeyDown(KeyCode.E)) // if the nearby interactable is item and E is pressed
             {
                 if (nearbyInteractable = GameObject.Find("Berry"))
                 {
-                    if (berrychecks.sigmaboy == 0)
-                    {
-                        berrytime = 1;
-                    }
+                    berrytime = 1;
                 }
                 interacting = true; //player has interacted
                 if (nearbyInteractable = GameObject.Find("Hammer(Clone)"))

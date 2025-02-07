@@ -22,5 +22,25 @@ public class inventorymain : MonoBehaviour
     {
         invy = transform.localPosition.y;
         invx = transform.localPosition.x;
+        if (Input.GetKeyDown(KeyCode.R) && slots != 3)
+        {
+            skibiditoilet = 1;
+            slots += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.T) && slots != 3)
+        {
+            premierballs = 1;
+            slots += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Y) && slots != 3)
+        {
+            sigmaboy = 1;
+            slots += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.X) && slots != 3)
+        {
+            berry = 1;
+            slots += 1;
+        }
     }
 }
