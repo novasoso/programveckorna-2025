@@ -6,15 +6,28 @@ public class NPC1DialogueText : MonoBehaviour
 {
     GameObject box;
 
+    checkInteraction hammertime;
+
+    public bool startedSecondQuest = false;
+
     private checkInteraction interactScript;
+
     private playerDetecter detector;
+
     public GameObject changeIcon;
+
     private Image changeThis;
+
     private mainDialogueText tmp;
+    
     public Sprite myDialogueIcon;
+    
     public int dialogueTrack = 0;
+    
     public float zibzab;
+    
     public bool startedQuest = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +44,13 @@ public class NPC1DialogueText : MonoBehaviour
         {
             changeThis.sprite = myDialogueIcon;
             if (dialogueTrack == 0)
+            if (hammertime.pickedUpHammer == true)
+            {
+                tmp.StartRevealText("Can you find my planks as well?", zibzab);
+                startedSecondQuest = true;
+
+            }
+            else if (dialogueTrack == 0)
             {
                 tmp.StartRevealText("G'day friend! The name's Greg.", zibzab); //calls upon method inside mainDialogueText that does stuff. reveal time accounts for time spent generating first arguement
             }
