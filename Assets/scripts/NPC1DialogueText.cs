@@ -8,15 +8,26 @@ public class NPC1DialogueText : MonoBehaviour
 
     checkInteraction hammertime;
 
+    public bool startedSecondQuest = false;
+
     private checkInteraction interactScript;
+
     private playerDetecter detector;
+
     public GameObject changeIcon;
+
     private Image changeThis;
+
     private mainDialogueText tmp;
+    
     public Sprite myDialogueIcon;
+    
     public int dialogueTrack = 0;
+    
     public float zibzab;
+    
     public bool startedQuest = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +46,9 @@ public class NPC1DialogueText : MonoBehaviour
             changeThis.sprite = myDialogueIcon;
             if (hammertime.pickedUpHammer == true)
             {
-                tmp.StartRevealText("Thank you my friend. I've looked everywhere for my precious hammer, where did ya even find it?", zibzab);
+                tmp.StartRevealText("Can you find my planks as well?", zibzab);
+                startedSecondQuest = true;
+
             }
             else if (dialogueTrack == 0)
             {

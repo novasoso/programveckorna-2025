@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369586b0dbc70684e88288d185111ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startedSecondQuest: 0
   changeIcon: {fileID: 0}
   myDialogueIcon: {fileID: 576553139, guid: 24cc197d562eadf4383e1874977698b1, type: 3}
   dialogueTrack: 0
@@ -277,5 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec8a1e6515ec684c9968a24467008cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildersPlanks: {fileID: 6005262863787700583, guid: d4dd36a2475358b48b16a6c2174dce14, type: 3}
   builderHammer: {fileID: 7518842111687935570, guid: 48a969e2311357948aaa15cb4e9c93f0, type: 3}
   hammerSpawn: {x: -30, y: -5, z: -4}
+  plankSpawn: {x: 20, y: -8, z: 0}
