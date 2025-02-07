@@ -19,21 +19,20 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isNight) //IsNiGhT, don't make me mad >:[
+        {
+            isNight = true;
+            summon();
+            nightMode();
+        }
+        else if (isNight == false)
+        {
+            dayMode();
+            isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
+        }
     }
     void Update()
     {
-           /* if (isNight == false) //IsNiGhT, don't make me mad >:[
-            {
-                isNight = true;
-                summon();
-                nightMode();
-            }
-            else if (isNight)
-            {
-                dayMode();
-                isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
-            }*/
         cycle += Time.deltaTime; //Vide used MY code and ruined it with these TRASH names!!
         if (cycle >= 90)
         {
