@@ -19,11 +19,11 @@ public class NightMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.sceneLoaded += helloOnSceneLoaded;
+        
     }
     void Update()
     {
-            if (isNight == false) //IsNiGhT, don't make me mad >:[
+           /* if (isNight == false) //IsNiGhT, don't make me mad >:[
             {
                 isNight = true;
                 summon();
@@ -33,7 +33,7 @@ public class NightMode : MonoBehaviour
             {
                 dayMode();
                 isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
-            }
+            }*/
         cycle += Time.deltaTime; //Vide used MY code and ruined it with these TRASH names!!
         if (cycle >= 360)
         {
@@ -157,18 +157,5 @@ public class NightMode : MonoBehaviour
         boxOfLimit.w = playerPosiition.y - areaOfNoNoSquare;
         return boxOfLimit;
     }
-    void helloOnSceneLoaded(Scene scene,  LoadSceneMode mode)
-    {
-        if (isNight == false) //IsNiGhT, don't make me mad >:[
-        {
-            isNight = true;
-            summon();
-            nightMode();
-        }
-        else if (isNight)
-        {
-            dayMode();
-            isNight = false; //listen here BUD you do NOT wanna mess with me I'm the alpha budy
-        }
-    }
+  
 }

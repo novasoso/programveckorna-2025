@@ -14620,6 +14620,10 @@ PrefabInstance:
       propertyPath: noOfEnemies
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5807987330617110473, guid: d629648f1be79e646bc725b274e0723e, type: 3}
+      propertyPath: enemyToSummon1
+      value: 
+      objectReference: {fileID: 5383725930543997120, guid: c5934130b7b7ff84cbf9e0e6365fbb5d, type: 3}
     - target: {fileID: 7433722437875018175, guid: d629648f1be79e646bc725b274e0723e, type: 3}
       propertyPath: m_Name
       value: NightControler
