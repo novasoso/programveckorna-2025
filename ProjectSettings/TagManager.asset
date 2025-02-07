@@ -16,6 +16,7 @@ TagManager:
   - berry
   - nightcontroller
   - combatLog
+  - berrychecker
   layers:
   - Default
   - TransparentFX

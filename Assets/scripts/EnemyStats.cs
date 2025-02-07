@@ -23,8 +23,13 @@ public class EnemyStats : MonoBehaviour
         if(EnemyHealth <= 0)
         {
             EnemyHealth = originalEnemyHealth;
-            SceneManager.LoadScene("Main");
-            Destroy(gameObject);
+            Invoke("loadthisguy", 3f);
         }
+    }
+
+    void loadthisguy()
+    {
+        SceneManager.LoadScene("Main");
+        Destroy(gameObject);
     }
 }
