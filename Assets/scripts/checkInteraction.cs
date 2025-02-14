@@ -23,6 +23,7 @@ public class checkInteraction : MonoBehaviour
         {
             if (nearbyInteractable.CompareTag("Interactable") && Input.GetKeyDown(KeyCode.E)) // if the nearby interactable is item and E is pressed
             {
+                interacting = true; //player has interacted
                 if (nearbyInteractable = GameObject.Find("Berry"))
                 {
                     if (berrychecks.sigmaboy == 0)
@@ -30,11 +31,9 @@ public class checkInteraction : MonoBehaviour
                         berrytime = 1;
                     }
                 }
-                interacting = true; //player has interacted
                 if (nearbyInteractable = GameObject.Find("Hammer(Clone)"))
                 {
                     pickedUpHammer = true;
-
                 }
             }
             else if (nearbyInteractable.CompareTag("NPC") && Input.GetKeyDown(KeyCode.E)) // else, if the nearby interactable is NPC and E is pressed
@@ -44,6 +43,10 @@ public class checkInteraction : MonoBehaviour
                 string getDialogue = nearbyInteractable.name + "DialogueText"; //save the npc's name +"DialogueText" as a string, which is the script containing the given npcs dialogue
                 if (nearbyInteractable.GetComponent(getDialogue)) //returns true if nearby npc has dialogue component that matches string getDialogue
                 {
+                    if (nearbyInteractable.GetComponent(getDialogue) == true)
+                    {
+                        print("i hate this guy");
+                    }
                     var DialogueToAccess = nearbyInteractable.GetComponent(getDialogue); // access and assign the npc's dialogue script as getDialogues class
                     DialogueToAccess.gameObject.SendMessage("Dialogue"); //call upon the npc's dialogue Method.
                 }

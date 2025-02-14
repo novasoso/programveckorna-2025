@@ -5989,7 +5989,6 @@ Transform:
   - {fileID: 1941693165}
   - {fileID: 1971029790}
   - {fileID: 1356286708}
-  - {fileID: 1136614050}
   - {fileID: 2113719474}
   - {fileID: 1821903581}
   - {fileID: 1542351647}
@@ -6131,6 +6130,7 @@ Transform:
   - {fileID: 1463566509}
   - {fileID: 1887759539}
   - {fileID: 462686388}
+  - {fileID: 2140100858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &299361379
@@ -39675,6 +39675,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc1556834e8328b45ac174f8640ba056, type: 3}
+--- !u!4 &2140100858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1853668070853266203, guid: 587d9f0c82fe5c54a81502a46a0fd4c6, type: 3}
+  m_PrefabInstance: {fileID: 353882203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2144998617
 GameObject:
   m_ObjectHideFlags: 0
@@ -40088,6 +40093,10 @@ PrefabInstance:
     - target: {fileID: 3093792435587231714, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       propertyPath: m_fontSizeBase
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654373146186722394, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 8503749016800838671, guid: da7903765bf8945439fd638fc3a2c3a5, type: 3}
       propertyPath: m_SizeDelta.x

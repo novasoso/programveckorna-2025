@@ -6,8 +6,6 @@ public class NPC1DialogueText : MonoBehaviour
 {
     GameObject box;
 
-    checkInteraction hammertime;
-
     public bool startedSecondQuest = false;
 
     private checkInteraction interactScript;
@@ -43,8 +41,7 @@ public class NPC1DialogueText : MonoBehaviour
         while (detector.PlayerDetected == true && interactScript.interacting == true)
         {
             changeThis.sprite = myDialogueIcon;
-            if (dialogueTrack == 0)
-            if (hammertime.pickedUpHammer == true)
+            if (interactScript.pickedUpHammer == true)
             {
                 tmp.StartRevealText("Can you find my planks as well?", zibzab);
                 startedSecondQuest = true;
@@ -60,10 +57,12 @@ public class NPC1DialogueText : MonoBehaviour
             }
             else if (dialogueTrack == 2)
             {
+                tmp.tmpugui.fontSize = 44;
                 tmp.StartRevealText("If ya can find them for me, and toss in a few bucks, I could build a real nice house for ya.", zibzab);
             }
             else if (dialogueTrack == 3)
             {
+                tmp.tmpugui.fontSize = 45;
                 tmp.StartRevealText("Good luck, mate.", zibzab);
                 startedQuest = true;
             }
