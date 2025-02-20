@@ -3865,7 +3865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 205270571}
   - component: {fileID: 205270570}
-  - component: {fileID: 205270572}
   m_Layer: 0
   m_Name: Rocks_0
   m_TagString: Environment
@@ -3934,25 +3933,12 @@ Transform:
   m_GameObject: {fileID: 205270569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.520929, y: -4.036001, z: 0}
+  m_LocalPosition: {x: -13.5, y: -3.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 296634780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &205270572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205270569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02604278b742d6a45a5ef754a22f9459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0
 --- !u!1 &206982323
 GameObject:
   m_ObjectHideFlags: 0
@@ -10248,20 +10234,12 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 811947474682884164, guid: 5c1a28f6a2ae89b4eb4cb15ac4eb6882, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 811947474682884164, guid: 5c1a28f6a2ae89b4eb4cb15ac4eb6882, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 811947474682884164, guid: 5c1a28f6a2ae89b4eb4cb15ac4eb6882, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.32
       objectReference: {fileID: 0}
     - target: {fileID: 811947474682884164, guid: 5c1a28f6a2ae89b4eb4cb15ac4eb6882, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5250638
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 811947474682884164, guid: 5c1a28f6a2ae89b4eb4cb15ac4eb6882, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23711,7 +23689,7 @@ Transform:
   m_GameObject: {fileID: 1176778248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.069527, y: -4.358345, z: 0}
+  m_LocalPosition: {x: -10.29, y: -4.1219387, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29469,7 +29447,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1526880173}
   - component: {fileID: 1526880172}
-  - component: {fileID: 1526880174}
   m_Layer: 0
   m_Name: GrassPatches 2_0 (6)
   m_TagString: Environment
@@ -29544,19 +29521,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1526880174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526880171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02604278b742d6a45a5ef754a22f9459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0
 --- !u!1 &1528631298
 GameObject:
   m_ObjectHideFlags: 0
@@ -32427,7 +32391,7 @@ Transform:
   m_GameObject: {fileID: 1707497620}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.720473, y: -3.3964064, z: 0}
+  m_LocalPosition: {x: 6.5, y: -3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36682,11 +36646,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6080603919725111133, guid: c730e7819ca39da4c999433e31a0e934, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.364677
+      value: -49.708427
       objectReference: {fileID: 0}
     - target: {fileID: 6080603919725111133, guid: c730e7819ca39da4c999433e31a0e934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.120249
+      value: 5.245249
       objectReference: {fileID: 0}
     - target: {fileID: 6080603919725111133, guid: c730e7819ca39da4c999433e31a0e934, type: 3}
       propertyPath: m_LocalPosition.z
